@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+    <title>App - Project Smart Bin</title>
+    <meta name="description" content="">
+
+    <!-- Mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+    <!-- Chrome / Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="black">
+    <link rel="icon" href="icon.png">
+
+    <link rel="stylesheet" href="css/lib/material.color.min.css">
+    <link rel="stylesheet" href="css/lib/material.min.css">
+    <link rel="stylesheet" href="css/lib/material-icons.css">
+    <link rel="stylesheet" href="css/lib/roboto.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="cards">
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <div id="loader" class="spinner hidden hide">
+        <div class="mdl-shadow--4dp">
+            <div class="mdl-spinner mdl-spinner--single-color mdl-js-spinner is-active"></div>
+        </div>
+    </div>
+    <div id="header-background" class="mdl-color--primary"></div>
+    <header class="mdl-layout__header mdl-layout__header--seamed">
+        <div class="mdl-layout__header-row">
+            <span class="mdl-layout-title">Project Smart Bin - De App</span>
+            <div class="mdl-layout-spacer"></div>
+            <nav class="mdl-navigation">
+                <a class="mdl-navigation__link" href="index.html"><span>Home</span></a>
+                <a class="mdl-navigation__link" href="concept.html"><span>Concept</span></a>
+                <a class="mdl-navigation__link" href="about.html"><span>Over ons</span></a>
+                <a class="mdl-navigation__link active" href="app.html"><span>De app</span></a>
+            </nav>
+        </div>
+    </header>
+    <div class="mdl-layout__drawer dis-visible">
+        <nav class="mdl-navigation">
+            <a class="mdl-navigation__link" href="index.html"><i class="material-icons">home</i><span>Home</span></a>
+            <a class="mdl-navigation__link" href="concept.html"><i class="material-icons">delete</i><span>Concept</span></a>
+            <a class="mdl-navigation__link" href="about.html"><i class="material-icons">info</i><span>Over ons</span></a>
+            <a class="mdl-navigation__link active" href="app.html"><i class="material-icons">apps</i><span>De app</span></a>
+        </nav>
+    </div>
+    <main class="mdl-layout__content">
+        <div class="page-content">
+            <div id="app">
+                <section id="intro" class="mdl-card mdl-shadow--2dp">
+
+                </section>
+                <section id="phone-embed" class="mdl-card mdl-shadow--2dp">
+                    <div>
+                        <iframe src="http://ianwensink.nl/dev/hr/internetfornature/Smart-Bin-App" id="phone-frame" name="phone-frame" frameborder="0"></iframe>
+                    </div>
+                </section>
+                <section class="mdl-card mdl-shadow--2dp embed-controls">
+                    <div class="embed-controls-header">
+                        <h2 class="mdl-typography--headline">Nieuwe gebruiker aanmaken</h2>
+                    </div>
+                    <form action="">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" id="new-user-name">
+                            <label class="mdl-textfield__label" for="new-user-name">Naam</label>
+                        </div>
+                        <button id="submit-new-user" type="button" class="mdl-button mdl-js-button mdl-button--primary mdl-js-ripple-effect mdl-button--raised">Voeg toe</button>
+                    </form>
+                </section>
+                <section id="update-weight-controls" class="mdl-card mdl-shadow--2dp embed-controls">
+                    <div class="embed-controls-header">
+                        <h2 class="mdl-typography--headline">Weging toevoegen (in kg)</h2>
+                        <i id="refresh-bin-list" class="material-icons mdl-color-text--primary">refresh</i>
+                    </div>
+                    <span id="no-bins-text">Voeg eerst <a href="http://ianwensink.nl/dev/hr/internetfornature/Smart-Bin-App/add-bin.html" target="phone-frame">hier</a> een bin toe</span>
+                </section>
+            </div>
+        </div>
+        <div aria-live="assertive" aria-atomic="true" aria-relevant="text" class="mdl-js-snackbar"></div>
+    </main>
+</div>
+<script src="js/lib/jquery.min.js"></script>
+<script src="js/lib/jgestures.min.js"></script>
+<script src="js/lib/material.min.js"></script>
+<script src="js/lib/material.add.min.js"></script>
+<script src="js/lib/APIFunctions.js"></script>
+<script src="js/script.js"></script>
+<script src="js/app-embed.js"></script>
+<script>
+    $(initAppEmbed);
+</script>
+</body>
+</html>
