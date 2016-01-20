@@ -1,7 +1,7 @@
 function initAppEmbed() {
     $("#submit-new-user").on("click", createUser);
-    getBins();
     $("#refresh-bin-list").on("click", getBins);
+    getBins();
 }
 
 function createUser() {
@@ -37,7 +37,11 @@ function createUser() {
 }
 
 function getBins() {
-    API.getUser(getUserId(), "bins", formatBins);
+    if (getUserId() != 2) {
+        API.getUser(getUserId(), "bins", formatBins);
+        $("#add-user-first-text").addClass("hidden");
+        $("#no-bins-text").removeClass("hidden");
+    }
 }
 
 function formatBins(bins) {

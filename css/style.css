@@ -107,26 +107,13 @@ body.white-background .mdl-layout__content {
     background-color: #e5e5e5;
 }
 
-#header-background {
-    z-index: 3;
-    width: 100%;
-    height: 64px;
-    position: absolute;
-    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
-}
-
-@media screen and (max-width: 1024px) {
-    #header-background {
-        height: 56px;
-    }
-}
-
 .mdl-layout__header-row {
-    min-width: 800px;
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
 }
 
-.mdl-layout__header-row, .page-content {
-    position: relative;
+.page-content {
     max-width: 900px;
     margin: 0 auto;
 }
