@@ -1,6 +1,7 @@
 function initAppEmbed() {
     $("#submit-new-user").on("click", createUser);
     $("#refresh-bin-list").on("click", getBins);
+    getUser();
     getBins();
 }
 
@@ -25,8 +26,9 @@ function createUser() {
                             },
                             success: function () {
                                 localStorage.userId = user.UserId;
-                                $("iframe").attr("src", "http://ianwensink.nl/dev/hr/internetfornature/setNewUserId.php?id=" + user.UserId);
+                                $("iframe").attr("src", "http://project.hosted.hr.nl/2015_2016/mtnll_mt2b_t3/Website/setNewUserId.php?id=" + user.UserId);
                                 button.removeAttr("disabled");
+                                getUser();
                             }
                         });
                     });
@@ -36,11 +38,19 @@ function createUser() {
     }
 }
 
+function getUser() {
+    API.getUser(getUserId(), "info", printUser);
+}
+
+function printUser(user) {
+    $("#current-user #user-name").text(user.Name);
+    $("#current-user #user-email").text(user.Email);
+}
+
 function getBins() {
     if (getUserId() != 2) {
         API.getUser(getUserId(), "bins", formatBins);
         $("#add-user-first-text").addClass("hidden");
-        $("#no-bins-text").removeClass("hidden");
     }
 }
 
@@ -68,7 +78,6 @@ function printBins(binForms, bins) {
     $(".submit-bin-weight").on("click", updateBinWeight);
     if (bins.Bins.length > 0) $("#no-bins-text").addClass("hidden");
     else $("#no-bins-text").removeClass("hidden");
-    componentHandler.upgradeAllRegistered();
 }
 
 function updateBinWeight() {
@@ -78,7 +87,7 @@ function updateBinWeight() {
     if (input.val() != "") {
         API.editWeight(binId, input.val(), "45f17b19ad5527e8bd6a0b749bf412ac", function (o) {
             input.val("");
-            $("iframe").attr("src", $("iframe").attr("src"));
+            $("iframe").attr("src", $("iframe").contents().get(0).location.href);
             $(".is-focused").removeClass("is-focused");
         });
     }
