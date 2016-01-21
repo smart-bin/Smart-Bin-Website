@@ -78,6 +78,7 @@ function printBins(binForms, bins) {
     $(".submit-bin-weight").on("click", updateBinWeight);
     if (bins.Bins.length > 0) $("#no-bins-text").addClass("hidden");
     else $("#no-bins-text").removeClass("hidden");
+    componentHandler.upgradeAllRegistered();
 }
 
 function updateBinWeight() {
@@ -88,7 +89,8 @@ function updateBinWeight() {
         API.editWeight(binId, input.val(), "45f17b19ad5527e8bd6a0b749bf412ac", function (o) {
             input.val("");
             $("iframe").attr("src", $("iframe").contents().get(0).location.href);
-            $(".is-focused").removeClass("is-focused");
+            $(".is-dirty").removeClass("is-dirty");
+            componentHandler.upgradeAllRegistered();
         });
     }
 }
