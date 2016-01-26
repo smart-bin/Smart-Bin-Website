@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+    <title>Blogposts - Project Smart Bin</title>
+    <meta name="description" content="">
+
+    <!-- Mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+    <!-- Chrome / Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="black">
+    <link rel="icon" href="icon.png">
+
+    <link rel="stylesheet" href="css/lib/material.color.min.css">
+    <link rel="stylesheet" href="css/lib/material.min.css">
+    <link rel="stylesheet" href="css/lib/material-icons.css">
+    <link rel="stylesheet" href="css/lib/roboto.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="cards">
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <div id="loader" class="spinner hidden hide">
+        <div class="mdl-shadow--4dp">
+            <div class="mdl-spinner mdl-spinner--single-color mdl-js-spinner is-active"></div>
+        </div>
+    </div>
+    <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+            <span class="mdl-layout-title">Blog - App</span>
+            <div class="mdl-layout-spacer"></div>
+            <nav class="mdl-navigation">
+                <a class="mdl-navigation__link" href="index.html"><span>Home</span></a>
+                <div class="submenu-container mdl-color--primary">
+                    <a for="categories-submenu" class="mdl-navigation__link has-submenu active" href="#"><span>Categorieën</span></a>
+                    <ul id="categories-submenu" class="submenu mdl-color--primary mdl-shadow--2dp">
+                        <li><a href="category-app.html"><span>App</span></a></li>
+                        <li><a href="category-api.html"><span>API</span></a></li>
+                        <li><a href="category-bin.html"><span>Bin</span></a></li>
+                        <li><a href="category-team.html"><span>Team</span></a></li>
+                        <li><a href="category-misc.html"><span>Overig</span></a></li>
+                    </ul>
+                </div>
+                <a class="mdl-navigation__link" href="about.html"><span>Over ons</span></a>
+                <a class="mdl-navigation__link" href="app.html"><span>De app</span></a>
+            </nav>
+        </div>
+    </header>
+    <div class="mdl-layout__drawer dis-visible">
+        <nav class="mdl-navigation">
+            <a class="mdl-navigation__link" href="index.html"><i class="material-icons">home</i><span>Home</span></a>
+            <a class="mdl-navigation__link active" href="#"><i class="material-icons">list</i><span>Categorieën</span></a>
+            <a class="mdl-navigation__link" href="about.html"><i class="material-icons">info</i><span>Over ons</span></a>
+            <a class="mdl-navigation__link" href="app.html"><i class="material-icons">apps</i><span>De app</span></a>
+        </nav>
+    </div>
+    <main class="mdl-layout__content">
+        <div class="page-content">
+            <div id="">
+                <section id="" class="mdl-card content-card text-card mdl-shadow--2dp">
+                    <h1>Agile Development App</h1><br>
+                        <p>Gedurende periode 1 begonnen we met het uitstippelen van de applicatie die bij ons concept hoort. Na vele iteraties kwam daar een [clickable prototype] uit. Deze periode was het aan Ian de taak om dit clickable prototype om te zetten in een daadwerkelijk web-app en Android app.</p>
+                        <p>Om snel resultaat aan de projectbegeleider te kunnen laten zien, is ook hier gekozen voor een agile aanpak. Iteratie stond vooral in het teken van content vullen, en nog niet zozeer in dat van de styling. De enige styling die er tijdens iteratie 1 is toegepast is die van de library die we gebruiken (Material Design Light). Voor alle content moest wel veel met de API gewerkt worden, dus er zat veel tijd in het printen van alle data.</p>
+                        <p>Iteratie 2 (sprint 3) ging over styling en doortesten. Alle pagina’s hebben we uitgebreid laten testen door mensen uit onze doelgroep, waar we erg nuttige verbeterpunten uit gehaald hebben.</p>
+                        <h2>Detailpagina bin</h2>
+                        <h3>Iteratie 1</h3>
+                        <p>Zo is er als eerste een scherm gemaakt waarop van een bepaalde bin te zien was hoe vol de batterij was. Als dit battery niveau dan in de database werd aangepast, werd ook de app aangepast (zie screenshot 1).</p>
+                        <table>
+                            <tbody>
+                            <tr>
+                                <td><img class="alignnone size-full wp-image-246" src="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2016/01/Screenshot-1.png" alt="Screenshot 1" width="360" height="643"></td>
+                            </tr>
+                            <tr>
+                                <td><i>Screenshot 1</i></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <h3>Iteratie 2</h3>
+                        <p>Toen de basis van de app stond is de functionaliteit toegevoegd om per bin te zien wat de statistieken van de afgelopen tijd waren voor die specifieke bin. Daar is veel over geïtereerd en na veel tests kwam daar uiteindelijk screenshot 2 uit.</p>
+                        <table>
+                            <tbody>
+                            <tr>
+                                <td><img class="alignnone size-full wp-image-242" src="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2016/01/Screenshot-2.png" alt="Screenshot 2" width="360" height="644"></td>
+                            </tr>
+                            <tr>
+                                <td><i>Screenshot 2</i></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <h2>Mijn bins overzichtspagina</h2>
+                        <h3>Iteratie 1</h3>
+                        <p>Tijdens iteratie 1 ging het er bij deze overzichtpagina vooral om dat alle bins van de ingelogde user&nbsp; zichtbaar waren met de daarbij bijbehorende informatie als een simpele statistiek en de batterij status. Je kon op dat moment nog niet doorklikken, het ging puur om de lijstweergave (zie screenshot 3).</p>
+                        <table>
+                            <tbody>
+                            <tr>
+                                <td><img class="alignnone size-full wp-image-245" src="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2016/01/Screenshot-3.png" alt="Screenshot 3" width="360" height="638"></td>
+                            </tr>
+                            <tr>
+                                <td><i>Screenshot 3</i></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <h3>Iteratie 2</h3>
+                        <p>Iteratie 2 draaide om het functioneel maken van de cards door een doorklikbutton te laten zien en onze stijl door te voeren door een gedeelte te maken voor een plaatje (zie screenshot 4).</p>
+                        <table>
+                            <tbody>
+                            <tr>
+                                <td><img class="alignnone size-full wp-image-244" src="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2016/01/Screenshot-4.png" alt="Screenshot 4" width="363" height="640"></td>
+                            </tr>
+                            <tr>
+                                <td><i>Screenshot 4</i></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <h3>Iteratie 3</h3>
+                        <p>Als laatste was het belangrijk om content als de plaatjes en icons toe te voegen. Ook zijn toen de laatste dingetjes gestyled (zie screenshot 5)</p>
+                        <table>
+                            <tbody>
+                            <tr>
+                                <td><img class="alignnone size-full wp-image-243" src="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2016/01/Screenshot-5.png" alt="Screenshot 5" width="360" height="643"></td>
+                            </tr>
+                            <tr>
+                                <td><i>Screenshot 5&nbsp;</i></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <h2>Statistieken app</h2>
+                        <p>Tijdens ons onderzoek in periode 1 kwamen we erachter dat een veelgenoemde reden om niet te recyclen is dat mensen geen benul hebben van hun impact. Met dit gedeelte van de app wilden we dat oplossen door mensen inzicht te geven in hun afval patronen en zo te laten zien dat ze wel degelijk iets kunnen betekenen.</p>
+                        <h3>Iteratie 1</h3>
+                        <p>We begonnen de statistieken pagina met het ophalen van alle bins en die tonen als een legenda. Van daaruit moesten relevante statistieken en grafieken worden opgebouwd (zie screenshot 6). Wat betreft de filters wilden we het voor iteratie 1 houden bij het instellen van een andere datum. Je kon zo aangeven van welke periode de statistieken moesten worden geladen (zie screenshot 7).</p>
+                        <table>
+                            <tbody>
+                            <tr>
+                                <td><img class="size-full wp-image-241 alignnone" src="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2016/01/Screenshot-6.png" alt="Screenshot 6" width="361" height="640"></td>
+                                <td><img class="size-full wp-image-240 alignnone" src="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2016/01/Screenshot-7.png" alt="Screenshot 7" width="363" height="641"></td>
+                            </tr>
+                            <tr>
+                                <td><i>Screenshot 6</i></td>
+                                <td><i>Screenshot 7</i></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <h3>Iteratie 2</h3>
+                        <p>Na het bouwen van een aantal statistieken (screenshot 8) kwamen we er gedurende tests uit dat mensen meer wilden kunnen instellen. Onze doelgroep vertelde ons dat ze bepaalde bins weg wilden kunnen filteren. Daarnaast gaven zij aan dat het handig was om wat standaard data onder het periode-filter weer te geven (zie screenshot 9).</p>
+                        <table>
+                            <tbody>
+                            <tr>
+                                <td><img class="alignnone size-full wp-image-238" src="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2016/01/Screenshot-8.png" alt="Screenshot 8" width="361" height="636"></td>
+                                <td><img class="alignnone size-full wp-image-239" src="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2016/01/Screenshot-9.png" alt="Screenshot 9" width="359" height="638"></td>
+                            </tr>
+                            <tr>
+                                <td><i>Screenshot 8</i></td>
+                                <td><i>Screenshot 9</i></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <h2>Achievements app</h2>
+                        <p>Misschien technisch het simpelste, maar functioneel het belangrijkste onderdeel van de app. Tijdens ons onderzoek gaven mensen vaak aan dat ze het idee hadden dat ze geen verschil uit zouden maken als ze zouden recyclen. Wij willen deze mensen aansporen en we wilden het voor ze inzichtelijk maken dat ze veel impact kunnen hebben. Dit doen we door de gebruikers van feedback te voorzien in de vorm van achievements. Zo krijg je een melding als je genoeg papier hebt gerecycled voor een nieuw tijdschrift, of genoeg plastic voor een plastic bekertje. Op deze manier wordt het leuker en duidelijk om te recyclen.</p>
+                        <h3>Iteratie 1</h3>
+                        <p>Tijdens iteratie 1 is ervoor gekozen om alle achievements onder dezelfde noemer te plaatsen (zie screenshot 10).</p>
+                        <table>
+                            <tbody>
+                            <tr>
+                                <td><img class="alignnone size-full wp-image-236" src="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2016/01/Screenshot-10.png" alt="Screenshot 10" width="360" height="642"></td>
+                            </tr>
+                            <tr>
+                                <td><i>Screenshot 10</i></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <h3>Iteratie 2</h3>
+                        <p>Na een test met een gebruiker uit de doelgroep werd al vrij snel duidelijk dat dit tonen op dezelfde pagina voor onduidelijkheid zorgde. We hebben er daardoor voor gekozen om de achievements onder te verdelen in twee tabs: “Klaar” en “Bezig” (zie screenshot 11).</p>
+                        <table>
+                            <tbody>
+                            <tr>
+                                <td><a href="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2016/01/Screenshot-11.png"><img class="alignnone wp-image-237 size-full" src="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2016/01/Screenshot-11.png" alt="" width="365" height="641"></a></td>
+                            </tr>
+                            <tr>
+                                <td><i>Screenshot 11</i></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                </section>
+
+                <section id="" class="mdl-card content-card text-card mdl-shadow--2dp">
+                    <h1>Clickable prototype: Android App</h1><br>
+                        <p>De link naar het clickable prototype van de android app kun je <a href="https://live.uxpin.com/d76028f2c144f096c5963afdb3d1ea452ba200c8#/pages/30149646" target="_blank">hier</a> vinden. Wij zijn er erg tevreden over wij zullen zoveel mogelijk proberen om deze style aan te houden als wij beginnen met het bouwen van de applicatie.</p>
+                        <p>Het is goed om te zien, wij vinden dat wij de goede kant op gaan. Hier beneden kunt u nog even kijken naar het iteratieve proces.</p>
+                        <div id="attachment_66" style="width: 310px" class="wp-caption alignnone"><a href="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2015/10/Schets-3.jpg"><img class="size-medium wp-image-66" src="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2015/10/Schets-3-300x169.jpg" alt="Schets scherm status van de prullenbak..." width="300" height="169"></a><p class="wp-caption-text">Schets scherm status van de prullenbak…</p></div>
+                        <div id="attachment_67" style="width: 310px" class="wp-caption alignnone"><a href="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2015/10/Schets-4.jpg"><img class="size-medium wp-image-67" src="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2015/10/Schets-4-300x169.jpg" alt="Statistieken prullenbak..." width="300" height="169"></a><p class="wp-caption-text">Statistieken prullenbak…</p></div>
+                        <p>Het begon allemaal bij simpele schetsen van de applicatie. De bedoeling was toen dat je kon kijken hoe vol elke bak was en de statistieken daarvan.</p>
+                        <div id="attachment_59" style="width: 173px" class="wp-caption alignnone"><a href="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2015/10/Dashboard.png"><img class="size-medium wp-image-59" src="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2015/10/Dashboard-163x300.png" alt="Mock-up van het dashboard..." width="163" height="300"></a><p class="wp-caption-text">Mock-up van het dashboard…</p></div>
+                        <div id="attachment_58" style="width: 207px" class="wp-caption alignnone"><a href="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2015/10/Apps.png"><img class="size-medium wp-image-58" src="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2015/10/Apps-197x300.png" alt="Mock-up overzicht van de games..." width="197" height="300"></a><p class="wp-caption-text">Mock-up overzicht van de games…</p></div>
+                        <p>Deze wireframes toonden wij aan tijdens de tweede presentatie die Ian hield. Over deze wireframes, die Tom had gemaakt, waren wij aardig tevreden over in het begin. Pas in de vakantie toen Ian begon met het clickable prototype werd de wireframe geredesigned naar het volgende:</p>
+                        <p><a href="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2015/11/Schermopname-61.png"><img class="alignnone wp-image-158 size-medium" src="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2015/11/Schermopname-61-e1446423671966-168x300.png" alt="Schermopname (61)" width="168" height="300"></a></p>
+                        <p><a href="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2015/11/Schermopname-62.png"><img class="alignnone wp-image-159 size-medium" src="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2015/11/Schermopname-62-e1446423752440-170x300.png" alt="Schermopname (62)" width="170" height="300"></a></p>
+                        <p><a href="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2015/11/Schermopname-63.png"><img class="alignnone wp-image-160 size-medium" src="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2015/11/Schermopname-63-e1446423776777-170x300.png" alt="Schermopname (63)" width="170" height="300"></a></p>
+                        <p>Hier zijn wij erg tevreden over. Meer kunt u vinden op de link die ik boven gedeeld heb met u.</p>
+                </section>
+
+                <section id="" class="mdl-card content-card text-card mdl-shadow--2dp">
+                    <h1>Tamagochi & Garbage Shooter</h1><br>
+                    <p>De clickable prototype van de Garbageshooter kun je <a href="https://live.uxpin.com/ca024bb764c47c9fac7d4e1e49adf3adfd4eb1c8#/pages/30434428" target="_blank">hier</a> vinden. De clickable prototype van de Tamagotchi kun je <a href="https://live.uxpin.com/cf3f6679fc18d6c27b3fcb3f2684fde91d151100#/pages/30430979" target="_blank">hier</a> vinden.</p>
+                    <p>Ook met deze twee games zijn wij tevreden met hoe het eruit is komen te zien. Deze games zullen wij zelf programmeren. Omdat het open source is en dat wij een API beschikaar stellen, kunnen andere developpers informatie uit onze database ophalen en gebruiken. Hieronder ziet u het iteratieve proces van de game.</p>
+                    <p><strong>Garbageshooter</strong></p>
+                    <p>Dit idee is geïnspireerd door Bubbleshooter, een game die beschikbaar was op spele.nl. Het idee van de game wordt in het filmpje hieronder uitgelegd. Dit is tevens ook de eerste iteratie hiervan.</p>
+                    <video width="320" height="240" controls>
+                        <source src="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2015/10/20150929_104901.mp4" type="video/mp4">
+                    </video>
+                    <p>Dit waren de eerste tekeningen van de game.</p>
+                    <p>Vervolgens toonden wij de eerste wireframe aan tijdens de tweede presentatie die Ian hield.</p>
+                    <div id="attachment_60" style="width: 310px" class="wp-caption alignnone"><a href="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2015/10/garbage-shooter-ipad.png"><img class="size-medium wp-image-60" src="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2015/10/garbage-shooter-ipad-300x201.png" alt="Mock-up van een game die mogelijk zou zijn met de Open API..." width="300" height="201"></a><p class="wp-caption-text">Mock-up van Garbageshooter</p></div>
+                    <p>De laatste iteratie is natuurlijk terug te vinden op de clickable prototype. Tijdens het proces is het idee van de game niet zozeer veranderd, het was meer het design. Het idee is namelijk erg simpel, want het verschilt niet veel met de Bubbleshoort game.</p>
+                    <p><strong>Tamagotchi</strong></p>
+                    <div id="attachment_68" style="width: 310px" class="wp-caption alignnone"><a href="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2015/10/Schets-5.jpg"><img class="size-medium wp-image-68" src="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2015/10/Schets-5-300x169.jpg" alt="Schets van een game die mogelijk is met de Open API..." width="300" height="169"></a><p class="wp-caption-text">Schets van een game</p></div>
+                    <p>Ook deze game begon met een simpele schets.</p>
+                    <div id="attachment_63" style="width: 310px" class="wp-caption alignnone"><a href="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2015/10/GarbageGameWorld.png"><img class="size-medium wp-image-63" src="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2015/10/GarbageGameWorld-300x169.png" alt="Mock-up van een game die mogelijk is met de Open API..." width="300" height="169"></a><p class="wp-caption-text">Mock-up van een game die mogelijk is met de Open API…</p></div>
+                    <p>Dit is de wireframe van de game en de uiteindelijke versie is terug te zien op de clickable prototype ervan.</p>
+                </section>
+
+                <section id="" class="mdl-card content-card text-card mdl-shadow--2dp">
+                    <h1>Wireframes Main Hub</h1>
+                        <p>Even een update, want wij hebben onze wireframe aangepast. Tijdens de presentatie over ons concept toonde wij de klas de volgende wireframe:</p>
+                        <p><a href="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2015/10/Dashboard1.png"><img class="alignnone size-medium wp-image-118" src="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2015/10/Dashboard1-163x300.png" alt="Dashboard" width="163" height="300"></a></p>
+                        <p>Dit zou je dus zien als je de applicatie opent. Na wat besproken te hebben en wat user stories geschreven te hebben, hebben wij dit aangepast. Ian had twee versies gemaakt:</p>
+                        <p><a href="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2015/10/IMG-20151021-WA0011.jpg"><img class="alignnone size-medium wp-image-121" src="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2015/10/IMG-20151021-WA0011-170x300.jpg" alt="IMG-20151021-WA0011" width="170" height="300"></a></p>
+                        <p><a href="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2015/10/IMG-20151021-WA0010.jpg"><img class="alignnone size-medium wp-image-123" src="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2015/10/IMG-20151021-WA0010-222x300.jpg" alt="IMG-20151021-WA0010" width="222" height="300"></a></p>
+                        <p>Bij de tweede wireframe was het de bedoeling dat je de informatie om en om zag. De icoontjes zitten dus steeds links en rechts. Ian had met ons overlegd en iedereen stemde in dat de eerste versie beter en overzichtelijker is. Vandaar dat wij verder zijn gegaan met de eerste versie. Deze werkt sowieso efficiënter dan de wireframe die Tom had gemaakt voor de presentatie.</p>
+                        <p>Hoewel de eerste wireframe er gewoon overzichterlijk uitzag, denken wij dat de nieuwe versie toch iets beter is. Zodra je de applicatie opent, zie je meteen de status van de prullenbak en of je nog achievements gehaald hebt. Dit is natuurlijk een heel groot onderdeel van ons concept, dus wij vinden dat men dit als eerste te zien moet krijgen.</p>
+                </section>
+            </div>
+        </div>
+        <div aria-live="assertive" aria-atomic="true" aria-relevant="text" class="mdl-js-snackbar"></div>
+    </main>
+</div>
+<script src="js/lib/jquery.min.js"></script>
+<script src="js/lib/jgestures.min.js"></script>
+<script src="js/lib/material.min.js"></script>
+<script src="js/lib/material.add.min.js"></script>
+<script src="js/lib/APIFunctions.js"></script>
+<script src="js/script.js"></script>
+<script>
+
+</script>
+</body>
+</html>

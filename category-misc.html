@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+    <title>Blogposts - Project Smart Bin</title>
+    <meta name="description" content="">
+
+    <!-- Mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+    <!-- Chrome / Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="black">
+    <link rel="icon" href="icon.png">
+
+    <link rel="stylesheet" href="css/lib/material.color.min.css">
+    <link rel="stylesheet" href="css/lib/material.min.css">
+    <link rel="stylesheet" href="css/lib/material-icons.css">
+    <link rel="stylesheet" href="css/lib/roboto.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="cards">
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <div id="loader" class="spinner hidden hide">
+        <div class="mdl-shadow--4dp">
+            <div class="mdl-spinner mdl-spinner--single-color mdl-js-spinner is-active"></div>
+        </div>
+    </div>
+    <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+            <span class="mdl-layout-title">Blog - Overig</span>
+            <div class="mdl-layout-spacer"></div>
+            <nav class="mdl-navigation">
+                <a class="mdl-navigation__link" href="index.html"><span>Home</span></a>
+                <div class="submenu-container mdl-color--primary">
+                    <a for="categories-submenu" class="mdl-navigation__link has-submenu active" href="#"><span>Categorieën</span></a>
+                    <ul id="categories-submenu" class="submenu mdl-color--primary mdl-shadow--2dp">
+                        <li><a href="category-app.html"><span>App</span></a></li>
+                        <li><a href="category-api.html"><span>API</span></a></li>
+                        <li><a href="category-bin.html"><span>Bin</span></a></li>
+                        <li><a href="category-team.html"><span>Team</span></a></li>
+                        <li><a href="category-misc.html"><span>Overig</span></a></li>
+                    </ul>
+                </div>
+                <a class="mdl-navigation__link" href="about.html"><span>Over ons</span></a>
+                <a class="mdl-navigation__link" href="app.html"><span>De app</span></a>
+            </nav>
+        </div>
+    </header>
+    <div class="mdl-layout__drawer dis-visible">
+        <nav class="mdl-navigation">
+            <a class="mdl-navigation__link" href="index.html"><i class="material-icons">home</i><span>Home</span></a>
+            <a class="mdl-navigation__link active" href="#"><i class="material-icons">list</i><span>Categorieën</span></a>
+            <a class="mdl-navigation__link" href="about.html"><i class="material-icons">info</i><span>Over ons</span></a>
+            <a class="mdl-navigation__link" href="app.html"><i class="material-icons">apps</i><span>De app</span></a>
+        </nav>
+    </div>
+    <main class="mdl-layout__content">
+        <div class="page-content">
+                <section id="" class="mdl-card content-card text-card mdl-shadow--2dp">
+                    <h1>Het Concept, compleet</h1><br>
+                        <p>De afgelopen 4 maanden zijn wij bezig geweest met het ontwikkelen van Project SmartBin. Ideeën werden verzonnen, sommige werden verbeterd en uitgevoerd terwijl andere het concept niet haalden. Wij hebben veel moeten aanpassen aan ons concept en hebben (op advies van Leo Romeijn) besloten om het simpel te houden. Voor de presentatie houden wij het als prototype. Wel schrijven wij een paar black box ideeën uit die het concept uiteindelijk compleet zou maken.</p>
+                        <hr>
+                        <p>&nbsp;</p>
+                        <p>De afgelopen weken hebben wij erover nagedacht welke afvalsoorten wij het besten zouden ondersteunen voor Project SmartBin. Wij begonnen met de volgende afvalsoorten:</p>
+                        <ol>
+                            <li>GFT</li>
+                            <li>plastic</li>
+                            <li>restafval</li>
+                            <li>papier</li>
+                            <li>glas</li>
+                            <li>aluminium</li>
+                        </ol>
+                        <p>Hoewel het geweldig zou zijn als men alles in één bak kon scheiden, wordt dit in de realiteit te lastig. Hiervoor heb je ook een te grote bak voor nodig of teveel kleinere bakken. Wij hebben dus research gedaan naar de afvalsoorten. Wij hebben naar onszelf gekeken, maar ook naar de omgeving en een aantal websites. Uit dit onderzoek is gebleken dat wij het beste gebruik kunnen maken van de volgende afvalsoorten:</p>
+                        <ol>
+                            <li>GFT</li>
+                            <li>plastic</li>
+                            <li>restafval</li>
+                            <li>papier</li>
+                        </ol>
+                        <p>Wij hebben bij de omgeving gekeken en glas wordt wel opgehaald, maar niet in vuilniszakken. Er staan buiten bepaalde containers waar je je glasafval in kunt doen. Maar je kan er geen vuilniszak in doen, je moet het glas één voor één in de container gooien. Dit houdt ook in dat er niet veel mensen zijn die hun glas apart in een vuilniszak scheiden en daarom hebben wij de ondersteuning hiervan, voor het protoype, weggelaten.</p>
+                        <p>Plastic daarentegen wordt op steeds meer plekken apart verzameld en opgehaald. Steeds meer mensen scheiden plastic daarom ook apart. Het is dus niet meer dan logisch dat plastic ondersteund wordt door de prullenbak.</p>
+                        <p>Papier wordt ook apart verzameld en opgehaald. Meestal zit de papieren container naar de glascontainer. Maar de papiercontainer is wel groot genoeg voor vuilniszakken, dus dit kan ook ondersteund worden door de SmartBin.</p>
+                        <p>Restafval en GFT is vuil dat iedereen heeft, dit mag dus ook niet missen bij de SmartBin.</p>
+                        <hr>
+                        <p>&nbsp;</p>
+                        <p><strong>Aanpassing 2 (Black Box 1)</strong></p>
+                        <p>Ook hebben wij ervoor gekozen om weer terug te gaan naar het ondersteunen van 1 bak. Het vorige idee was namelijk dat men de keuze kreeg om meerdere bakken aan te sluiten aan het systeem. Op deze manier kon je de hoofdbak in de keuken houden, een papierenbak in de kantoorruimte, een plasticbak in de woonkamer enz. Al deze bakken communiceerden dan draadloos met de hoofdbak. Hier waren wij erg enthousiast over, maar wij wisten dat het een totale uitdaging zou worden.</p>
+                        <p>Nadat wij het interview hielden met onze expert Leo Romeijn, veranderden wij toch weer van concept. Van Leo krijgen wij als advies om het niet te moeilijk te maken. Hij vertelde ons dat wij het project moesten zien als een prototype. Het kan al heel snel ingewikkeld raken, vandaar dat wij ook dit advies kregen van Leo Romeijn. Dit advies hebben wij daarom ook opgevolgd, wij hebben daarom besloten om het, voor nu, nog maar bij 1 bak te houden waar verschillende afvalsoorten gescheiden kunnen worden. Voor nu is dit een black box idee, wat het concept compleet zou maken.</p>
+                        <p><strong>Black Box 2</strong></p>
+                        <p>Het tweede idee was dat wij, met de hulp van een expert, een eigen bak zouden ontwikkelen. Deze bakken zouden voldoen aan de eisen die wij toen hadden. Een speciaal plekje voor de Arduino, een soort plankje op de sensor. Op dit plankje komt de vuilniszak en daarin komt natuurlijk het vuil. Ook zouden wij eventueel nog ruimte maken voor een klein schermpje. Op dit schermpje kan je basisinformatie zien van de prullenbak, zoals bijvoorbeeld hoe vol de bak is. Ook dit hebben wij aangepast. Wij hebben ervoor gekozen om een goede bak aan te schaffen. In deze bak vestigen wij het vastgesoldeerde Arduino en sensor zodat het vuil gemeten kan worden. Ook zullen wij voor de presentatie gebruik maken van 1 prullenbak, puur ter demonstratie.</p>
+                        <p><strong>Black Box 3</strong></p>
+                        <p>Het derde idee was dat je een melding zou krijgen wanneer de bak vol is. Dit wilden wij doen door een infraroodsensor bovenaan de prullenbak te plaatsen. Zodra het vuil contact maakt met de sensor, zou er een berichtje gestuurd worden naar je smartphone zodat je de zak kon vervangen. Dit houdt in dat wij van meer sensoren gebruik zouden maken. Wij hebben ervoor gekozen om dit idee weg te laten voor het prototype, maar het kan zeker iets zijn wat echt gebruikt kan worden.</p>
+                        <p><strong>Black Box 4</strong></p>
+                        <p>Om awareness te creëren en om te laten zien wat het recyclen van plastic nou daadwerkelijk oplevert willen we plastic zakjes laten maken van het gerecyclede plasticafval uit de Smart-Bin. Op deze manier zien mensen het resultaat van die kleine beetje vuil wat zij recyclen en wat voor verschil het kan maken. Deze plastic zakjes zouden dan door ons aangeboden worden.</p>
+                        <p>Al deze Black Box ideeën zouden ons concept compleet maken. Voor het prototype kiezen wij ervoor om deze ideeën (voor nu) weg te laten.</p>
+                </section>
+
+                <section id="" class="mdl-card content-card text-card mdl-shadow--2dp">
+                    <h1>Grand Finale: to do (Arduino)</h1><br>
+                        <p>Project SmartBin is voor het grootste gedeelte al af. Alles wat hoort te werken, werkt naar behoren. Er zijn nog wel een aantal belangrijken punten die moeten gebeuren voor de grand finale:</p>
+                        <ol>
+                            <li>Wij moeten de data die wij binnenkrijgen van de gewichtssensor omzetten in massa (N) en daarna naar gram en/of kilogram. Op deze manier hebben wij cijfers waar wij wat mee kunnen. De API van Tim kan deze cijfers beter lezen en het zorgt er ook voor dat het goed weergegeven wordt op de App die Ian ontwikkelt.</li>
+                            <li>Wij moeten vervolgens een passend formaat bedenken voor een prullenbak die wij kunnen aantonen op de eindmarkt. In week 7 zal hiermee begonnen worden.</li>
+                            <li>Daarna moeten wij de draadjes van de Arduino nog vastsolderen aan elkaar zodat het er niet afvalt of losgaat wanneer de prullenbak in beweging is.</li>
+                        </ol>
+                        <p>Let’s do this!</p>
+                </section>
+
+                <section id="" class="mdl-card content-card text-card mdl-shadow--2dp">
+                    <h1>Sprintreview 3</h1><br>
+                        <p>Wij hadden gister de laatste sprintreview. Toen kwamen de presentaties. Wij kozen ervoor om ons werk volledig aan te tonen. De presentatie ging zeer geslaagd en wij zijn blij met het feedback dat wij hebben ontvangen. Nu is het nog de laatste twee weken even knallen zodat wij ruim op tijd zijn voor de eindmarkt!</p>
+                </section>
+
+                <section id="" class="mdl-card content-card text-card mdl-shadow--2dp">
+                    <h1>GitHub!</h1><br>
+                        <p>Tijdens dit project moet er natuurlijk veel geprogrammeerd worden. Voor ons als team moet dat gebeuren op drie verschillende vlakken:<br>
+                            – De Mobiele App<br>
+                            – De API<br>
+                            – De Arduino/Smart Bin</p>
+                        <p>Om de code gemakkelijk met elkaar te delen hebben we besloten om gebruik te maken van GitHub. Hier uploaden en updaten we onze code voor de drie verschillende onderdelen.<br>
+                            Hieronder een impressie van hoe GitHub eruit ziet.</p>
+                        <p><em>Ons project met de drie verschillende onderdelen</em><br>
+                            <a href="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2016/01/Github1.png"><img class="alignnone size-medium wp-image-205" src="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2016/01/Github1-300x176.png" alt="Github1" width="300" height="176"><br>
+                            </a></p>
+                        <p><i>Alle code&nbsp;van de API<br>
+                            <img class="alignnone size-medium wp-image-206" src="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2016/01/Github2-300x223.png" alt="Github2" width="300" height="223"></i></p>
+                </section>
+
+                <section id="" class="mdl-card content-card text-card mdl-shadow--2dp">
+                    <h1></h1><br>
+                        <p>Omdat wij vooral veel vragen hadden over de Arduino en het doorsturen van data waren we in eerste instantie opzoek naar een expert die hier veel verstand had. Zo kwamen we bij Leo Romeijn.<br>
+                            Het contact leggen was even lastig aangezien hij niet reageerde op onze mailtjes. Maar uiteindelijk hebben we hem na een lange zoektocht door het schoolgebouw toch gevonden.<br>
+                            Hieronder ons interview met hem;</p>
+
+                            <video width="320" height="240" controls>
+                                <source src=" http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2016/01/20151127_160420-1.mp4?_=1" type="video/mp4">
+                            </video>
+                            <p><b>De belangrijkste punten die wij uit het gesprek hebben gehaald</b><br>
+                            – Hou het simpel, het blijft een prototype en niet een volledig eindproduct<br>
+                            – Bestel een sensor aan ga er gewoon mee aan de slag, in principe werkt alles op een Arduino.<br>
+                            – Let op, je kunt niet zomaar via een WiFi Shield met het schoolnetwerk verbinden<br>
+                            – Een lijst van websites met tutorials en webshops voor sensoren</p>
+                </section>
+
+                <section id="" class="mdl-card content-card text-card mdl-shadow--2dp">
+                    <h1>FACT Sheet</h1><br>
+                        <p>UPDATE</p>
+                        <p>Versie twee van het factsheet van Project Smart Bin. Na feedback van de klas en de projectdocent hebben we veel verbeterd. Zo is de tekst nu grotendeels weg en vervangen voor plaatjes en icons, en leggen we niet meer een grote nadruk op het probleem “Global Warming”. We introduceren het probleem, en onze oplossing hierop. Verder hebben we nu een plaatje van hoe de bins eruit gaan zien, en heeft de app veel meer nadruk gekregen.<a href="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2015/11/Factsheet-Smart-Bin-v2.1.png"><img class="alignnone size-full wp-image-178" src="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2015/11/Factsheet-Smart-Bin-v2.1.png" alt="Factsheet Smart Bin v2.1" width="4961" height="3508"></a></p>
+                        <p>&nbsp;</p>
+                        <p>De eerste versie van het factsheet van Project Smart Bin, waarin ons concept wordt neergezet.</p>
+                        <p><a href="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2015/11/Factsheet-Smart-Bin-v2.png"><img class="alignnone size-full wp-image-174" src="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2015/11/Factsheet-Smart-Bin-v2.png" alt="Factsheet Smart Bin v2" width="4961" height="3508"></a></p>
+                </section>
+
+                <section id="" class="mdl-card content-card text-card mdl-shadow--2dp">
+                    <h1>Sfeer tijdens het project</h1>
+                        <p>We zitten in het tweede jaar, dus we hebben weer een nieuw project. Wij mochten dit keer niet zelf uitkiezen met wie wij in het team kwamen, dat werd voor ons besloten.</p>
+                        <p>Ookal hadden wij dit team niet zelf opgesteld, de sfeer was vaak goed. Wij konden goed met elkaar samenwerken en gaven en ontvingen goede feedback van elkaar en van Stan. Er waren bijna geen momenten in de afgelopen 8 weken dat er iets niet goed ging. Maar als er iets niet goed ging, werd het probleem opgelost.</p>
+                        <p>Tijdens de projectlessen hebben wij het erg gezellig met elkaar. Maar het moet natuurlijk niet te gezellig, wij kunnen de goede balans vinden tussen hard werken en het gezellig hebben. De deliverables haalden wij op tijd en wij keken ook kritisch naar elkaars werk. Als er iets niet goed was, zeiden&nbsp;wij er wat van. Niet om elkaar af te kraken, maar om elkaar beter te maken. Tijdens onze koffie-dates bijvoorbeeld, liet iedereen zien wat hij die week had gemaakt. Als dat niet goed genoeg was volgende anderen, dan schreven we wat punten op die beter konden en dan kon deze persoon daar weer mee aan de slag. Op deze manier haalden we zoveel mogelijk uit alle onderdelen van ons product.</p>
+                        <p>Er was wel één moment waarop de sfeer een beetje gespannen was.&nbsp;De eerste les&nbsp;na de herfstvakantie vertelde Ian eerlijk hoe hij zich voelde over de communicatie van het groepje. Hij gaf aan dat hij baalde van de slechte bereikbaarheid van Tim en Plaisir, en dat daar bovenop kwam dat ze de afspraken van die week niet volledig waren nagekomen. Door de sfeer en het vertrouwen dat heerst binnen het groepje konden we hier open en eerlijk over praten. We hebben afspraken gemaakt over hoe we gingen voorkomen dat dit weer ging gebeuren en hebben het gewoon als vrienden afgesloten.</p>
+                        <p>We weten na acht weken wat we aan elkaar hebben. We weten waar onze sterke, maar ook waar onze zwakkere punten liggen. Hier gaan we aan het begin van het volgende project goed over praten. Uiteindelijk willen we elkaar natuurlijk versterken. Iedereen is gespecialiseerd in iets anders, dus we moeten vooral elkaars krachten gebruiken.</p>
+                </section>
+
+                <section id="" class="mdl-card content-card text-card mdl-shadow--2dp">
+                    <h1>Feedback na de presentatie</h1><br>
+                        <p>Gister was de eindpresentatie. Ian en Tom stonden voor de klas en gaven een goede presentatie over de Smart Bin. Na de presentatie was er nog gelegenheid voor vragen en feedback:</p>
+                        <ol>
+                            <li>Het is natuurlijk belangrijk dat wij een expert zoeken in het maken van prullenbakken. Maar volgens Dieuwertje is het ook belangrijk dat wij zoeken naar een expert in het recyclen. Hier kunnen wij zeker wat mee.</li>
+                            <li>Over het algemeen vond men het clickable prototype er goed uit zien. Men snapte alleen niet waarom iets belangrijks als de achievements helemaal onderaan het menu te vinden is. Dit kan beter ergens bovenaan of bij het beginscherm.</li>
+                            <li>Dit is meer feedback op de presentatie. Het is beter om in het begin het totaalconcept goed uit te leggen en om te vertellen wie de doelgroep is. Dit is voor de mensen die het even niet meer wisten en ook voor mensen die dit voor het eerst horen.</li>
+                            <li>Stan kwam met een applicatie op de Google Play Store (waarvan ik momenteel de naam van kwijt ben). Deze applicatie geeft je een melding wanneer je je vuil buiten neer moet zetten. Hij vertelde ons dat wij misschien konden kijken naar een mogelijkheid om het met onze applicatie te koppelen.</li>
+                            <li>Nog een feedback was dat wij als standaardtaal beter de Nederlandse taal kunnen gebruiken. Hierdoor trekken wij de meeste klanten. Alhoewel moet ik wel zeggen dat de taal afhangt van de taal van uw mobiele telefoon.</li>
+                            <li>Dit gaat ook over de presentatie. Wij hadden niet duidelijk aangetoond welk afval je allemaal kan scheiden met de prullenbak. Dit is iets waar wij naar kunnen kijken.</li>
+                        </ol>
+                        <p>Wij danken Stan, Dieuwertje en de rest van de klas voor de feedback. Er zitten bruikbare punten tussen en wij zullen er zeker naar kijken.</p>
+                </section>
+
+                <section id="" class="mdl-card content-card text-card mdl-shadow--2dp">
+                    <h1>Skype; De puntjes op de i zetten</h1><br>
+                        <p>Wij hadden net even een teamvergadering via Skype. Allevier waren wij aanwezig en hadden wij het nog over de laatste dingetjes die moesten gebeuren voor de deadline:</p>
+                        <ul>
+                            <li><strong>Userstories.</strong> De userstories moesten compleet zijn afgerond. Alle userstories moeten gegroepeerd worden en gesorteerd volgens de MoSCoW methode. Bij elke userstory moeten wij het onderdeel van de Sprint neerzetten voor in de tweede periode.</li>
+                            <li><strong>Het blog.</strong> Het blog is een belangrijk deel, het weergeeft het proces van het team. Een link naar de userstories en de clickable prototypes moeten op het blog komen. Ook moet de feedback van de presentatie van morgen erop komen te staan.</li>
+                            <li><strong>PPT presentatie.</strong> De powerpoint moest nog afgemaakt worden voor de volgende dag. Morgen is natuurlijk de presentatie, dus alles moet dan af zijn om te presenteren.</li>
+                            <li><strong>Notulist</strong> De presentatie morgen moet genoteerd worden. Er moet opgeschreven worden wat voor feedback er gegeven is, zodat wij daar later weer naar kunnen kijken.</li>
+                        </ul>
+                        <p>Het was een goede Skypesessie. Hier hebben wij echt een checklist gemaakt van wat er nog moet gebeuren en hebben wij een duidelijk overzicht.</p>
+                </section>
+
+                <section id="" class="mdl-card content-card text-card mdl-shadow--2dp">
+                    <h1></h1><br>
+                        <p>Afgelopen dinsdag (27 oktober) was de eerste les na de vakantie. Nadat Stan bij ons kwam kijken gingen wij verder werken aan het clickable prototype en het ontwerp van de prullenbak. Maar voordat wij verder konden confronteerde Ian het team.</p>
+                        <p>Ian was namelijk niet tevreden over hoe de manier van communicatie verliep. Vooral in de vakantie werd er erg weinig gesproken. Als Ian iets vroeg in de groepsapp, was Tom de enige die elke keer reageerde en feedback gaf. Vooral Plaisir en Tim waren vaak afwezig in de groepsapp en dat hoort natuurlijk niet.</p>
+                        <p>Er was weleens een moment waar Ian vastliep met het clickable prototype. Omdat hij hulp nodig had, stuurde hij een bericht in de groepsapp. En als maar 1 ander teamlid reageert en de rest niet, is niet fijn natuurlijk. Zo kom je ook niet veel verder.</p>
+                        <p>Plaisir en Tim begrepen Ian’s teleurstelling mbt de communicatie en wij hadden daar besloten om actiever te zijn in de groepsapp en beter te communiceren.</p>
+                        <p>Ik moet wel zeggen dat de communicatie veel beter gaat nu. Iedereen is dan actief bezig en dat maakt werken aan een project aangenamer.</p>
+                </section>
+
+            <section id="" class="mdl-card content-card text-card mdl-shadow--2dp">
+                    <h1>Koffiebreak!</h1><br>
+                        <p>Woensdag viel Media &amp; Creativiteit uit, dus waren wij als klas eerder uit. We besloten om met z’n vieren toch nog even wat te gaan drinken met elkaar, puur voor de sfeer. We gingen toen gewoon naar de vijfde verdieping toe.</p>
+                        <p>Het was erg gezellig, maar wij konden het toch niet laten om even over het project te praten. Wij gaven elkaar toen feedback op elkaars verrichte werk. Wij willen ervoor zorgen dat alles er strak uitziet voor de presentatie voor as vrijdag.</p>
+                </section>
+
+                <section id="" class="mdl-card content-card text-card mdl-shadow--2dp">
+                    <h1>User Stories</h1><br>
+                        <p>Voor het clickable prototype hebben wij ook user stories nodig. De userstories kun je <a href="https://docs.google.com/spreadsheets/d/1bZC2G1b_pPOyJZsDRfpX49gCqMA07DWjdz5tekanNAU/edit#gid=0" target="_blank">hier</a>&nbsp;vinden. Wij hebben de user stories gesorteerd op:</p>
+                        <ul>
+                            <li>De main hub app. Hier kom je als je de app opent.</li>
+                            <li>Statistieken. Hier zie je de statistieken van de prullenbak. Je ziet dus hoeveel vuil erin zit, wanneer het vol is, wanneer het geleegd moet worden etc.</li>
+                            <li>Afvalbak. Dit zijn de user stories over het fysieke product. Wij willen de bak simpel houden.</li>
+                            <li>API. Dit zijn de user stories over de functionaliteiten van ons project.</li>
+                        </ul>
+                        <p>De prioriteit van de user stories zijn verdeeld in 4 letter: M, C, S, W, dit is volgens de MoSCoW methode. Alle stories met de M zijn van hoge prioriteit en dat moet er aan het eind van de sprint staan. Als dat er is, kunnen wij verder met de Could haves.</p>
+                        <p>Als wij bezig zijn met een taak of een taak hebben afgerond, kan de status aangepast worden op de sheets. Alles staat nu nog op ‘to do’, maar dat zal komende periode veranderd worden.</p>
+                </section>
+
+
+                <section id="" class="mdl-card content-card text-card mdl-shadow--2dp">
+                    <h1>SCRUM-Board</h1><br>
+                        <p>Wij gebruiken een online SCRUM-Board om onze taken bij te houden. Op Trello kunnen we daardoor alles zien wat je op een fysiek SCRUM-Board ziet, plus wat extra’s.</p>
+                        <p>Je kunt bijvoorbeeld “due-dates” instellen, waardoor gebruikers een e-mail krijgen als een deadline bijna bereikt word. Je kunt taken toewijzen aan andere personen, commentaar geven op kaarten, plaatjes van internet toevoegen, en stemmen op bepaalde features. Hiernaast is het eenvoudig op je mobiele telefoon te bekijken.</p>
+                        <p>Hieronder is een live pagina met onze Trello pagina. Je kunt hier ook in real-time onze edits zien. Scroll naar links en rechts om de gehele pagina te kunnen bekijken.</p>
+                        <p><iframe src="https://trello.com/b/b4mVpNP4.html" width="800px" height="800px" scrolling="yes"></iframe></p>
+                </section>
+
+                <section id="" class="mdl-card content-card text-card mdl-shadow--2dp">
+                    <h1>Het proces: van domein naar concept</h1><br>
+                        <p><strong>Dinsdag 15 september.&nbsp;</strong>We zijn het eens over een domein. We hebben een lijstje gemaakt van interessante dingen in de natuur waar techniek bij betrokken is, waarna we zijn gaan elimineren. Uiteindelijk kregen kozen we “Global Warming” uit de volgende domeinen:</p>
+                        <ul>
+                            <li><span style="font-weight: 400;">Global Warming</span></li>
+                            <li><span style="font-weight: 400;">Natuurrampen</span></li>
+                            <li><span style="font-weight: 400;">Burgerslachtoffers oorlogen</span></li>
+                            <li><span style="font-weight: 400;">warmtevervuiling (in water)</span></li>
+                            <li><span style="font-weight: 400;">Chemisch/radioactief afval</span></li>
+                            <li><span style="font-weight: 400;">(gebrek aan) Energieopslag (in combinatie met zonneenergie)</span></li>
+                            <li><span style="font-weight: 400;">Hondenpoep opruimen (-&gt;mest?)</span></li>
+                        </ul>
+                        <p><strong>Vrijdag 18 september&nbsp;</strong>presenteren we ons onderzoek tijdens een aantal <a href="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/wordpress/2015/10/05/global-warming-pitch/">speeddates</a>. We hebben dan al een paar richtingen om uiteindelijk een concept binnen te bedenken, maar iets concreets hebben we nog niet.</p>
+                        <p><strong>Maandag 28 september</strong> kwamen we bij elkaar omdat we een concept moesten hebben. We hebben toen definitief gekozen om binnen het subdomein “Recycling” een concept te gaan bedenken. Door mensen bewust te maken van wat ze weggooien en door ze te stimuleren om te recyclen, kunnen we het milieu verbeteren.</p>
+                        <p><b>De volgende dag, dinsdag 29 september,&nbsp;</b><a href="#">legden</a> we ons concept voor aan de projectdocent.&nbsp;Hij heeft ons toen van nuttige feedback voorzien waarna we direct na de projectles een echt concept neer hebben gezet.</p>
+                        <p><b>Op vrijdag 2 oktober&nbsp;</b><a href="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/wordpress/2015/10/05/pitch/">presenteerde</a> Ian ons concept. Ook nu kregen we weer nuttige feedback uit het publiek en van de projectdocent. Ook kregen we positieve reacties op het idee, waar wij erg blij mee zijn. We weten nu wat we nog aan het idee kunnen verbeteren, maar ook zeker wat er sterk aan is.</p>
+                        <p><strong>Het concept.</strong> Tijdens dit en het volgende project gaan wij werken aan een prullenbak die ervoor gaat zorgen dat mensen meer van hun afval gaan sorteren en recyclen. Na wat navraag is ons duidelijk geworden dat veel mensen niet sorteren om een aantal redenen. De voornaamste reden die wij te horen kregen waren:</p>
+                        <ul>
+                            <li>Het is teveel moeite voor dat beetje afval dat ik heb. Voor ik het weet heb ik het al bij het restafval gegooid</li>
+                            <li>Wat voor verschil maak ik nou met mijn plastic zakje.</li>
+                        </ul>
+                        <p>Door afvalscheiding makkelijker en leuker te maken willen wij mensen de moeite laten nemen. Door ze inzicht te geven in wat zij bijdragen aan het verbeteren van het milieu, willen we mensen meer het gevoel geven dat ze er wel degelijk toe doen. Elk kleine beetje is meegenomen. Als een miljoen mensen één plastic zakje recyclen, zijn dat toch weer een miljoen plastic zakjes.</p>
+                        <p>Wij willen dit gaan doen door een de bestaande prullenbak een upgrade te geven. De prullenbak zoals we hem kennen is een “gewoon” object. Door er een Smart Object te maken en hem te verbinden met het internet kunnen we data verzamelen over wat er wordt weggegooid. De data wordt vervolgens beschikbaar gesteld door middel van een open API en een platform voor App Developers om hun applicaties aan te hangen. Zo kunnen er games worden ontwikkeld die de data van de prullenbak gebruiken, of meer serieuze apps. Denk bijvoorbeeld aan een social media toepassing, waarbij de data kan worden vergeleken met Facebook-vrienden, of een toepassing waarbij er per stad te zien is hoe veel er gerecycled wordt.</p>
+                        <p>De prullenbak bestaat uit een aantal verschillende compartimenten. Elk compartiment dient een ander soort afval (plastic, papier/karton, metaal, GFT, glas, etcetera). Per compartiment wordt er bijgehouden hoeveel er wordt weggegooid aan gewicht, maar ook hoe vol de bak zit. Het eerste is vooral interessant voor de applicaties, het tweede is om bij te houden of de prullenbak geleegd moet worden.</p>
+                        <p>Met deze prullenbak zijn wij ervan overtuigd dat de drempel om te recyclen lager is, doordat het nu leuk is om het afval te scheiden. Wij snappen dat het een stuk minder interessant wordt als mensen er veel geld voor neer moeten leggen, maar door de app market community driven te maken kunnen we het product relatief goedkoop aanbieden.</p>
+
+                        <style type="text/css">
+                            #gallery-1 {
+                                margin: auto;
+                            }
+                            #gallery-1 .gallery-item {
+                                float: left;
+                                margin-top: 10px;
+                                text-align: center;
+                                width: 33%;
+                            }
+                            #gallery-1 img {
+                                border: 2px solid #cfcfcf;
+                            }
+                            #gallery-1 .gallery-caption {
+                                margin-left: 0;
+                            }
+                            /* see gallery_shortcode() in wp-includes/media.php */
+                        </style>
+                        <div id="gallery-1" class="gallery galleryid-50 gallery-columns-3 gallery-size-thumbnail"><dl class="gallery-item">
+                            <dt class="gallery-icon landscape">
+                                <a href="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/wordpress/2015/10/05/het-proces-van-domein-naar-concept/schets-1/"><img width="150" height="150" src="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2015/10/Schets-1-150x150.jpg" class="attachment-thumbnail" alt="Kiezen we voor een bak die het scheidt, of scheiden de mensen zelf..." aria-describedby="gallery-1-64"></a>
+                            </dt>
+                            <dd class="wp-caption-text gallery-caption" id="gallery-1-64">
+                                Kiezen we voor een bak die het scheidt, of scheiden de mensen zelf…
+                            </dd></dl><dl class="gallery-item">
+                            <dt class="gallery-icon landscape">
+                                <a href="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/wordpress/2015/10/05/het-proces-van-domein-naar-concept/schets-3/"><img width="150" height="150" src="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2015/10/Schets-3-150x150.jpg" class="attachment-thumbnail" alt="Schets scherm status van de prullenbak..." aria-describedby="gallery-1-66"></a>
+                            </dt>
+                            <dd class="wp-caption-text gallery-caption" id="gallery-1-66">
+                                Schets scherm status van de prullenbak…
+                            </dd></dl><dl class="gallery-item">
+                            <dt class="gallery-icon landscape">
+                                <a href="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/wordpress/2015/10/05/het-proces-van-domein-naar-concept/schets-4/"><img width="150" height="150" src="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2015/10/Schets-4-150x150.jpg" class="attachment-thumbnail" alt="Statistieken prullenbak..." aria-describedby="gallery-1-67"></a>
+                            </dt>
+                            <dd class="wp-caption-text gallery-caption" id="gallery-1-67">
+                                Statistieken prullenbak…
+                            </dd></dl><br style="clear: both"><dl class="gallery-item">
+                            <dt class="gallery-icon landscape">
+                                <a href="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/wordpress/2015/10/05/het-proces-van-domein-naar-concept/schets-5/"><img width="150" height="150" src="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2015/10/Schets-5-150x150.jpg" class="attachment-thumbnail" alt="Schets van een game die mogelijk is met de Open API..." aria-describedby="gallery-1-68"></a>
+                            </dt>
+                            <dd class="wp-caption-text gallery-caption" id="gallery-1-68">
+                                Schets van een game die mogelijk is met de Open API…
+                            </dd></dl><dl class="gallery-item">
+                            <dt class="gallery-icon landscape">
+                                <a href="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/wordpress/2015/10/05/het-proces-van-domein-naar-concept/schets-6/"><img width="150" height="150" src="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2015/10/Schets-6-150x150.jpg" class="attachment-thumbnail" alt="Uitschuif mechanisme om de prullenbak te legen..." aria-describedby="gallery-1-69"></a>
+                            </dt>
+                            <dd class="wp-caption-text gallery-caption" id="gallery-1-69">
+                                Uitschuif mechanisme om de prullenbak te legen…
+                            </dd></dl><dl class="gallery-item">
+                            <dt class="gallery-icon landscape">
+                                <a href="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/wordpress/2015/10/05/het-proces-van-domein-naar-concept/schets-2/"><img width="150" height="150" src="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2015/10/Schets-2-150x150.jpg" class="attachment-thumbnail" alt="Boven- (links) en voor- (rechts) aanzicht van de klep." aria-describedby="gallery-1-65"></a>
+                            </dt>
+                            <dd class="wp-caption-text gallery-caption" id="gallery-1-65">
+                                Boven- (links) en voor- (rechts) aanzicht van de klep.
+                            </dd></dl><br style="clear: both"><dl class="gallery-item">
+                            <dt class="gallery-icon landscape">
+                                <a href="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/wordpress/2015/10/05/het-proces-van-domein-naar-concept/schets-7/"><img width="150" height="150" src="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2015/10/Schets-7-150x150.jpg" class="attachment-thumbnail" alt="Uitzakken van de zakken" aria-describedby="gallery-1-70"></a>
+                            </dt>
+                            <dd class="wp-caption-text gallery-caption" id="gallery-1-70">
+                                Uitzakken van de zakken
+                            </dd></dl><dl class="gallery-item">
+                            <dt class="gallery-icon portrait">
+                                <a href="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/wordpress/2015/10/05/het-proces-van-domein-naar-concept/apps/"><img width="150" height="150" src="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2015/10/Apps-150x150.png" class="attachment-thumbnail" alt="Mock-up overzicht van de games..." aria-describedby="gallery-1-58"></a>
+                            </dt>
+                            <dd class="wp-caption-text gallery-caption" id="gallery-1-58">
+                                Mock-up overzicht van de games…
+                            </dd></dl><dl class="gallery-item">
+                            <dt class="gallery-icon portrait">
+                                <a href="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/wordpress/2015/10/05/het-proces-van-domein-naar-concept/dashboard/"><img width="150" height="150" src="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2015/10/Dashboard-150x150.png" class="attachment-thumbnail" alt="Mock-up van het dashboard..." aria-describedby="gallery-1-59"></a>
+                            </dt>
+                            <dd class="wp-caption-text gallery-caption" id="gallery-1-59">
+                                Mock-up van het dashboard…
+                            </dd></dl><br style="clear: both"><dl class="gallery-item">
+                            <dt class="gallery-icon landscape">
+                                <a href="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/wordpress/2015/10/05/het-proces-van-domein-naar-concept/garbage-shooter-ipad/"><img width="150" height="150" src="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2015/10/garbage-shooter-ipad-150x150.png" class="attachment-thumbnail" alt="Mock-up van een game die mogelijk zou zijn met de Open API..." aria-describedby="gallery-1-60"></a>
+                            </dt>
+                            <dd class="wp-caption-text gallery-caption" id="gallery-1-60">
+                                Mock-up van een game die mogelijk zou zijn met de Open API…
+                            </dd></dl><dl class="gallery-item">
+                            <dt class="gallery-icon landscape">
+                                <a href="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/wordpress/2015/10/05/het-proces-van-domein-naar-concept/garbagegameworld/"><img width="150" height="150" src="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2015/10/GarbageGameWorld-150x150.png" class="attachment-thumbnail" alt="Mock-up van een game die mogelijk is met de Open API..." aria-describedby="gallery-1-63"></a>
+                            </dt>
+                            <dd class="wp-caption-text gallery-caption" id="gallery-1-63">
+                                Mock-up van een game die mogelijk is met de Open API…
+                            </dd></dl><dl class="gallery-item">
+                            <dt class="gallery-icon landscape">
+                                <a href="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/wordpress/2015/10/05/het-proces-van-domein-naar-concept/garbagecan_3d_ai_closed/"><img width="150" height="150" src="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2015/10/GarbageCan_3D_AI_closed-150x150.png" class="attachment-thumbnail" alt="1e schets product - dicht" aria-describedby="gallery-1-61"></a>
+                            </dt>
+                            <dd class="wp-caption-text gallery-caption" id="gallery-1-61">
+                                1e schets product – dicht
+                            </dd></dl><br style="clear: both"><dl class="gallery-item">
+                            <dt class="gallery-icon landscape">
+                                <a href="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/wordpress/2015/10/05/het-proces-van-domein-naar-concept/garbagecan_3d_ai_open/"><img width="150" height="150" src="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2015/10/GarbageCan_3D_AI_open-150x150.png" class="attachment-thumbnail" alt="1e schets product - open" aria-describedby="gallery-1-62"></a>
+                            </dt>
+                            <dd class="wp-caption-text gallery-caption" id="gallery-1-62">
+                                1e schets product – open
+                            </dd></dl>
+                            <br style="clear: both">
+                        </div>
+                        <video width="320" height="240" controls>
+                            <source src="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2015/10/20150929_104901.mp4" type="video/mp4">
+                        </video>
+                </section>
+
+                <section id="" class="mdl-card content-card text-card mdl-shadow--2dp">
+                <h1>Eerste Concept</h1><br>
+                        <p>Na het maken van ons eerste concept, gingen we naar de docent voor feedback. Hier kregen we een aantal ideeën waar we zelf niet veel rekening mee hielden; Batterijen was één van deze. Ook deze zouden gescheiden moeten worden uiteraard, maar daar heb je niet zo’n grote bak voor nodig. Hierbij kwam ook de vraag of we geen variabele grootte moesten gebruiken, zodat mensen met verschillende gewoontes even goed gebruik konden maken.<br>
+                            Hiernaast kregen we de vraag of we iets in combinatie met afvalophaling en/of overheid iets konden doen om mensen aan te sporen. Hoewel dit ons zeker een goed idee leek, moeten we dit zeker verder uitwerken voor we het definitief aan het concept toe willen voegen.</p>
+                        <p>Hiernaast hebben we een aantal klasgenoten gevraagd om feedback. We hoorde positieve en negatieve dingen, en een interessante hieruit was de focus op gezinnen met kinderen; zeker zij zouden het spelcomponent leuk vinden.</p>
+                        <p>De ideeën en potentiële problemen waren allemaal belangrijk om mee te nemen in ons idee. Hoe groot moet de bak worden? Hoe regelen we afvalsoorten die maar in kleine hoeveelheden weggegooid worden? Kunnen we mensen belonen via een derde partij? Al deze punten moeten overwegen worden.</p>
+                        <p>We leggen waarschijnlijk eerst onze focus op de batterijen, en andere types afval die geen grote container nodig hebben. Dit is een probleem wat we waarschijnlijk het snelste op kunnen lossen, maar wat ook een groot deel van de vorm van ons product kan bepalen, waardoor het ons belangrijk lijkt dit eerst op orde te krijgen.</p>
+                </section>
+
+                <section id="" class="mdl-card content-card text-card mdl-shadow--2dp">
+                        <h1>Pitch!</h1><br>
+
+                        <p><span style="font-weight: 400;"><em>Op vrijdag 2 oktober was het dan eindelijk zover; de pitch. Dit was het moment dat we voor de klas ons concept moesten presenteren. We hebben ervoor gekozen om Ian de pitch te laten doen, aangezien dit één van zijn kwaliteite</em>n is.</span><span style="font-weight: 400;"><br></span></p>
+                        <p><span style="font-weight: 400;"><a href="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2015/10/Pitch_02102015.pdf" target="_blank">Klik hier voor een link naar de slides!</a><br>Bij ons domein, Global Warming, hebben we dus wat meer de focus gelegd op recycling. Om onze SmartBin in te leiden hebben we wat cijfers opgesteld over de mogelijke scenario’s van recycling. </span><b>(Slide 2)<br>
+                        </b><span style="font-weight: 400;">Vervolgens heeft Ian met grafische ondersteuning ons idee uitgelegd. Hoe wij onze SmartBin nou eigenlijk voorstelden en hoe we gewichtsensors gaan gebruiken. </span><b>(Slide 4 t/m 6)<br>
+                        </b><span style="font-weight: 400;">Het volgende punt was het systeem achter de prullenbak. Hoe gaat het in zijn werking? Waarmee laten we de SmartBin communiceren? Hoe ziet het eruit voor de gebruiker en wat zijn de functies? </span><b>(Slide 7 t/m 10)</b><b><br>
+                        </b><span style="font-weight: 400;">Hierna heeft Ian het toekomstbeeld toegelicht. Zo vertelde hij hoe in het meest ideale geval de SmartBin uiteindelijk in ieder huishouden zou opduiken. </span><b>(Slide 11)</b><b><br>
+                        </b><span style="font-weight: 400;">Met als afsluiter een quote van Yoko Ono: “Every drop in the ocean counts”. Hiermee wilden we aangeven dat we iedereen nodig hebben om de wereld tot een betere plek te maken.</span><b>(Slide 12)</b></p>
+                        <h2><span style="font-weight: 400;">Feedback</span></h2>
+                        <p><span style="font-weight: 400;">Na de pitch hebben we heel wat goede feedback ontvangen waar we zeker wat mee gaan doen. Hieronder voor ons de punten opgesteld waar we wat mee willen gaan doen:</span></p>
+                        <ul>
+                            <li style="font-weight: 400;"><span style="font-weight: 400;">Denk om de grootte, een kleine flat heeft geen ruimte voor een te grote bak.</span></li>
+                            <li style="font-weight: 400;"><span style="font-weight: 400;">Geef de bak een sexy uitstraling</span></li>
+                            <li style="font-weight: 400;"><span style="font-weight: 400;">Denk aan de doelgroep(eerst de twijfelaars, daarna de mensen die niks voelen voor afvalscheiding)</span></li>
+                            <li style="font-weight: 400;"><span style="font-weight: 400;">Een app waarbij je gegevens verzameld van straten, wijken of steden. Met bijvoorbeeld een map</span></li>
+                            <li style="font-weight: 400;"><span style="font-weight: 400;">De gegevens kunnen interessant zijn voor gemeentes</span></li>
+                        </ul>
+                        <h2><span style="font-weight: 400;">Conclusie</span></h2>
+                        <p><span style="font-weight: 400;">We kunnen terugkijken op een geslaagde pitch met positieve reacties en goede feedback. We hebben dankzij de vragen en opmerkingen een beter beeld gekregen over wat de knelpunten van ons idee zijn en wat goede toepassingen kunnen zijn.</span><span style="font-weight: 400;"><br></span><span style="font-weight: 400;">Nu is het tijd voor de volgende fase!</span></p>
+
+                </section>
+
+                <section id="" class="mdl-card content-card text-card mdl-shadow--2dp">
+                    <h1>Speeddates</h1><br>
+                        <p><em>Op vrijdag 18 september werden de pitches met andere teams gehouden. Het was de bedoeling dat wij ons domein moesten presenteren aan andere teams en feedback moesten ontvangen. Aan het eind van de pitch mocht je elkaar kaartjes geven. Deze kaartjes betekende dan dat je iemand goed vond meedoen met de pitch.</em></p>
+                        <h3>Hoe verliep het?</h3>
+                        <p>Wij hadden van tevoren besproken wat iedereen moest vertellen over het domein. Iedereen had dus de taak om het domein te onderzoeken en vooral om zijn stukje goed te kennen. Op werd er een Google Slides presentatie gemaakt die ons verhaal goed kon ondersteunen. De illustraties van de Google Slides presentatie zijn terug te vinden in ons artikel ‘Global Warming – Een groot probleem’. Onze voorbereiding was dus gewoon goed.</p>
+                        <p>Plaisir begon de pitch met een korte inleiding over Global Warming. Vervolgens ging Tom verder met de gevaren van global warming. Hij vertelde hoe broeikasgassen ontstaan en hoe het uit de hand kan lopen als wij niet uitkijken. Ian nam het toen over en vertelde wat er al aan Global Warming wordt gedaan. Denk aan recycling, duurzamere auto’s, gebouwen, apparaten etc. Ten slotte vertelde Tim aan projecten die bezig waren en wat wij er zelf nog eventueel aan zouden kunnen toevoegen.</p>
+                        <p>Nadat wij klaar waren, vertelden wij nog extra dat wij voor preventie gingen en niet zoekend naar een oplossing.</p>
+                        <p>Het pitchen (speeddaten) verliep zoals gepland. Wij zaten met team 4 tijdens onze eerste pitch en die verliep goed.</p>
+                        <p>Team 5 was het volgende team met wie wij moesten speeddaten. Ook hier hielden wij hetzelfde structuur aan als bij het eerste team.</p>
+                        <h3>Feedback</h3>
+                        <p>De feedback die wij ontvingen waren vooral positief. Er waren niet veel opmerkingen of dingen die echt geadresseerd moesten worden. Ik moet zeggen dat wij als team meer feedback gaven aan de andere twee teams dan dat zij ons feedback gaven. Wij vertelden hun ons verhaal duidelijk en lichtte onze keus voor het domein toe. Omdat wij toen nog niks over ons concept konden vertellen, was er daarvoor ook geen feedback. Het was voor de andere teams duidelijk dat wij preventief wilden werken en niet zoekend naar ‘de oplossing’, want dat is niet mogelijk.</p>
+                </section>
+
+                <section id="" class="mdl-card content-card text-card mdl-shadow--2dp">
+                    <h1>Global Warming - Een Groot Probleem</h1><br>
+                        <h2>Inleiding</h2>
+                        <blockquote><p>Opwarming van de aarde (<em>global warming</em>) is simpel gezegd de stijging van de gemiddelde temperatuur sinds de negentiende eeuw. De gemiddelde temperatuur is van 1880 tot 2012 met ongeveer 0,85 °C gestegen.&nbsp;<a href="https://nl.wikipedia.org/wiki/Opwarming_van_de_Aarde" target="_blank">[bron]</a></p></blockquote>
+                        <p><img class="wp-image-6 alignnone" src="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2015/09/temperatuurindex-300x220.jpg" alt="temperatuurindex" width="354" height="260"></p>
+                        <p>Het begon allemaal in 1896 in Zweden met Svante Arrhenius. Hij was de persoon die erachter kwam dat je met CO<sub>2&nbsp; </sub>in de atmosfeer de aarde kon verwarmen. Toen werd het nog niet gezien als een probleem, maar dat veranderde in de twintigste eeuw in 1938 toen een andere wetenschapper keek naar de gemiddelde temperatuur in de jaren daarvoor toen er ontdekt werd dat de aarde inderdaad aan het opwarmen is. [<a href="https://www.youtube.com/watch?v=McRYTC56DC4" target="_blank">bron</a>]&nbsp;De opwarming van de aarde komt door natuurlijke en menselijke invloeden. De mens is hoogstwaarschijnlijk de grootste oorzaak in de opwarming van de aarde. Verder wordt de klimaatverandering en het beïnvloeden van het broeikaseffect mede veroorzaakt door natuurlijke invloeden zoals zonneactiviteit, krachtige vulkaanuitbarstingen en interne variabiliteit.</p>
+                        <p><a href="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2015/09/aardeijs.png"><img class="wp-image-7 alignnone" src="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2015/09/aardeijs-e1442441318315-300x238.png" alt="aardeijs" width="387" height="307"></a></p>
+                        <p>De opwarming van de aarde is in hetzelfde tempo gestegen als in de laatste dertig tot zestig jaar. Het IPCC schreef in zijn laatste rapportage (2013) dat er sprake was van een ‘veel minder snelle stijging’ van de temperatuur. Helaas is deze uitspraak niet langer valide gesteld door de verschillende klimaatsceptici. De onderzoekers hebben de bestaande metingen geïnterpreteerd en gecorrigeerd. <a href="http://www.nrc.nl/nieuws/2015/06/04/wetenschappers-opwarming-aarde-helemaal-niet-gestopt-begin-deze-eeuw/" target="_blank">[bron]</a>De aarde blijft opwarmen, en de mens is er een grote oorzaak van met het gebruik van fossiele brandstoffen, ontbossing, etcetera. Het wordt tijd dat de mens zich ervan bewust wordt dat wij de grote oorzaak zijn van&nbsp;het opwarmen van de aarde.</p>
+                        <p><em>Global warming</em> kan desastreuze gevolgen hebben (overstromingen, rampen, honger, conflicten, bosbranden) als men zich er niet van bewust is en als er niets aan gedaan wordt. Gelukkig zijn er al projecten gaande die de opwarming (deels) kunnen oplossen en/of voorkomen. Helaas zijn niet alle projecten even succesvol en kan het hele probleem niet in één keer opgelost worden. De huidige projecten zijn handig, maar er ontbreekt bij veel projecten nog wat.</p>
+                        <h1>Oorzaken en gevolgen global warming</h1>
+                        <p><strong>Oorzaken<br>
+                        </strong></p>
+                        <h3>Fossiele brandstoffen</h3>
+                        <p>Door het gebruik van fossiele brandstoffen, zoals aardolie, aardgas en kolen, komen er grote hoeveelheden CO<sub>2</sub> vrij. Het overgrote deel&nbsp;van energie die we op aarde gebruiken komt van deze fossiele brandstoffen, dit is ruim 93%.<br>
+                            Naast het opwekken van energie gebruiken we fossiele brandstoffen voor verschillende doeleinden. Namelijk als brandstof voor ons vervoer en als grondstof voor industriële producten.<a href="http://www.climatehotmap.org/about/global-warming-causes.html">[bron]</a></p>
+                        <p><a href="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2015/09/co2-emissions-pie.jpg"><img class="wp-image-8 alignnone" src="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2015/09/co2-emissions-pie-300x267.jpg" alt="co2-emissions-pie" width="351" height="312"></a></p>
+                        <h3>Landbouw en veeteelt</h3>
+                        <p>Ook de landbouwsector draagt bij aan de uitstoot van broeikasgassen. Zo ontstaat er in mest methaan doordat bacteriën in de mest het organisch materiaal afbreken. Hiernaast komt er ook veel methaan vrij uit de bekken van dieren. Bij de spijsvertering ontstaat deze broeikasgas voornamelijk uit veevoer. 40% van de totale broeikasgassen die vrijkomen bij een melkveebedrijf is methaangas.<br>
+                            Door het gebruik van mest voor landbouwgrond ontstaat er ook een andere broeikasgas, namelijk lachgas (N<sub>2</sub>O). In de bodem kan de aanwezige stikstof worden omgezet in N<sub>2</sub>O. Hoe meer er wordt gemest, hoe makkelijker het is voor de ontwikkeling van lachgas.<a href="http://www.rwsleefomgeving.nl/onderwerpen/broeikasgassen/landbouw/">[bron]</a></p>
+                        <p>Lachgas en methaan zijn niet de enige broeikasgassen die worden uitgestoten in de landbouw. Hier komt nog een grote hoeveelheid CO<sub>2</sub> bij. Grote hoeveelheden brandstof worden namelijk gebruikt voor trekkers, tractoren en andere landbouwvoertuigen. Naast brandstof gebruikt men nog een enorme hoeveelheid energie om hun producten te verbouwen.<a href="http://www.agriholland.nl/dossiers/klimaatverandering/home.html#oorzaken">[bron]</a></p>
+                        <p><a href="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2015/09/broeikasgasse.jpg"><img class="wp-image-9 alignnone" src="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2015/09/broeikasgasse-300x221.jpg" alt="broeikasgasse" width="449" height="331"></a></p>
+                        <h3>Ontbossing</h3>
+                        <p>Een andere oorzaak voor de overmatige uitstoot van broeikasgassen is ontbossing. De bomen zetten de&nbsp;CO<sub>2</sub> om in O<sub>2</sub>&nbsp;en zonder bomen gebeurt dit niet.<a href="http://www.wnf.nl/nl/wat_wnf_doet/thema_s/bossen/ontbossing/klimaatverandering">[bron]</a>Het probleem ligt in de hoeveelheid hectares die dagelijks worden ontbost over de hele wereld. Uit onderzoek van de milieubeweging Amazon Information Network blijkt dat tussen 2000 en 2010 in het Braziliaanse regenwoud een gebied ter grootte van het Verenigd Koninkrijk is ontbost. Hiermee is ontbossing verantwoordelijk voor 15% van de totale uitstoot van broeikasgassen over de gehele wereld.<a href="http://www.nu.nl/wetenschap/2974186/ontbossing-brazilie-van-ongekende-omvang.html">[bron]</a></p>
+                        <h2>Gevolgen</h2>
+                        <p>Op basis van voorvallen uit de geschiedenis van ons klimaat kunnen er inschattingen worden gemaakt als de gemiddelde temperatuur met een bepaalde hoeveelheid stijgt. Hierbij kan een kleine stijging voor enorme consequenties zorgen.<a href="http://www.conserve-energy-future.com/GlobalWarmingEffects.php">[bron]</a></p>
+                        <h3>Stijging van 1°C</h3>
+                        <p>Wanneer de gemiddelde temperatuur met één graad stijgt, zullen de Alpen veel van hun sneeuw verliezen. Het smeltwater hiervan zal grote aardverschuivingen veroorzaken.<br>
+                            Door deze stijging van de temperatuur zal ook het poolijs versneld smelten. Hierbij komen er ontzettend veel pooldieren zoals ijsberen en walrussen in gevaar.<a href="http://wetenschap.infonu.nl/natuurverschijnselen/106227-gevolgen-opwarming-van-de-aarde-van-1c-tot-6c-warmer.html">[bron]</a></p>
+                        <p><img class="size-medium wp-image-10 alignnone" src="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2015/09/polar-bear-640x480-300x225.jpg" alt="polar-bear-640x480" width="300" height="225"></p>
+                        <h3>Stijging van 2°C</h3>
+                        <p><em><br>
+                        </em>Bij een stijging van 2°C zal de Grote Oceaan grotendeels giftig worden voor schaaldieren. Dit komt doordat de oceanen koolstofdioxide opnemen en wanneer er hier te veel van wordt opgenomen zullen ze verzuren.<br>
+                            In het gebied rond de Middellandse zee zullen hittegolven langer aanhouden met maar liefst zes weken gemiddeld. Hierdoor ontstaat er droogte en neemt de kans op&nbsp;bosbranden aanzienlijk toe.<br>
+                            Het is al bekend dat de poolkappen langzamerhand aan het smelten zijn. Maar deze stijging van de temperatuur zou fataal zijn voor de ijskap van Groenland. Deze kan dan in zijn geheel smelten met als gevolg dat de waterspiegel met zeven meter stijgt.</p>
+                        <p>Na de gemiddelde stijging van 2°C wordt door velen de grens getrokken. Hierna zou de opwarming van de aarde namelijk volledig uit de hand kunnen lopen.</p>
+                        <h3>Stijging van 3°C</h3>
+                        <p>Bij een stijging van <em>3°C </em>graden kan het tropische regenwoud van de Amazone worden blootgesteld aan extreme droogte en hitte, wat uiteindelijk tot bosbranden kan leiden. Deze regenwouden zijn niet beschermd tegen bosbranden zoals bossen waar dit vaker voorkomt. Hierdoor zou het gehele regenwoud kunnen afbranden wat ervoor zorgt dat er immense hoeveelheden koolstofdioxide vrijkomen.<br>
+                            Door hitte en droogte kunnen grote delen van Australië en Afrika onbewoonbaar worden en stormen zullen een stuk heftiger worden. In Europa wordt er in de zomer droogte verwacht en in de winter extreme regenval. Als gevolg van de extreme weersomstandigheden wordt er verwacht dat mensen gaan vluchten naar andere landen.</p>
+                        <p>&nbsp;</p>
+                        <h3>Stijging van 4°C</h3>
+                        <p>Bij een stijging van 4 graden smelten de poolkappen zodanig dat de gehele Noord Pool ijsvrij zal zijn. Dit zal zorgen voor een ontzettende stijging van de zeespiegel en ook zullen er pooldieren zoals de ijsbeer in het wild uitsterven.<br>
+                            Ook zullen andere poolkappen instorten waarbij de zeespiegel met nog eens vijf meter stijgt. Hierdoor zullen grote gebieden of zelfs hele eilandgroepen onder het water komen liggen.<br>
+                            Zuidelijke Europese landen zullen te maken krijgen met verwoestijning en er wordt verwacht dat er een grote migratiestroom richting het noorden zal plaatsvinden.</p>
+                        <p>&nbsp;</p>
+                        <h3>Stijging van 5-6°C</h3>
+                        <p>Bij een stijging van 5 graden zullen beide polen ijsvrij zijn en wordt er verwacht dat er subtropische diersoorten rond de Arctische delen van Canada kunnen gaan leven.<br>
+                            Giftige methaan bellen kunnen nu opstijgen vanuit de zeebodem. Deze zullen dus bijdragen aan een verdere stijging van de temperatuur en daarnaast kunnen deze enorme bellen zelfs tsunami’s veroorzaken.<br>
+                            Het einde van het geologische tijdperk “Perm” kende gemiddeldes van ongeveer 6 graden warmer dan nu. Wanneer we deze temperatuur weer bereiken op aarde zal menselijk leven alleen nog mogelijk zijn rond de polen. Als we kijken naar het tijdperk Perm waren 95% van alle diersoorten op aarde uitgestorven. Soortgelijke situaties kunnen dus weer de realiteit worden.<br>
+                            <a href="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2015/09/zoom.jpeg"><img class="wp-image-12 alignnone" src="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2015/09/zoom-219x300.jpeg" alt="zoom" width="297" height="407"></a></p>
+                        <h3>Schattingen</h3>
+                        <p>Het is belangrijk om te begrijpen dat we natuurlijk niet precies weten wat er gaat gebeuren wanneer de gemiddelde temperatuur verder stijgt. Maar deze inschattingen en voorspellingen zijn gebaseerd op wat we van de aarde en haar verschillende geologische tijdperken hebben geleerd.</p>
+                        <p>&nbsp;</p>
+                        <h1>Wat wordt er al aan gedaan?</h1>
+                        <p>Door de CO<sub>2</sub> te verminderen kan de straling van de zon de atmosfeer weer verlaten. Fotosynthese in bomen en planten zet deze CO<sub>2</sub> om in O<sub>2</sub>. Het behouden van flora en het verminderen van CO<sub>2</sub> aanvoer lijkt dus een goede combinatie om <em>Global Warming</em> tegen te gaan.&nbsp;Er wordt door middel van vliegtuigen, drones en robots gewerkt aan het planten van nieuwe bomen.</p>
+                        <p><a href="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2015/09/recycle.png"><img class="wp-image-13 alignnone" src="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2015/09/recycle-300x283.png" alt="recycle" width="378" height="357"></a></p>
+                        <p>Het recyclen van materiaal speelt hier een grote rol in. Bijvoorbeeld het recyclen van papier zorgt ervoor dat er minder bomen gekapt hoeven te worden en bij de verbranden van het papier&nbsp;komt&nbsp;veel CO<sub>2</sub> vrij, iets wat bij recyclen niet het geval is.<br>
+                            Het maken van plastic kost fossiele brandstof (olie). Door plastic te recyclen behoudt je die brandstof voor als het echt nodig is. Ook is de verbranding van plastic erg slecht voor het milieu door de grote hoeveelheden CO<sub>2</sub> uitstoot.</p>
+                        <p>Op het gebied van <em>Global Warming</em> wordt al veel gedaan om dit te voorkomen en te genezen. Auto’s – die traditioneel rijden op fossiele brandstof – worden veel zuiniger en gaan zelfs steeds meer over op elektrische stroom als voedingsbron. Momenteel zitten we nog in de overgangsfase tussen fossiele brandstof en elektriciteit waardoor je veel hybride auto’s ziet. Navigatiesystemen beginnen ook steeds beter aan te geven wat de meest energiezuinige route is. Bijvoorbeeld door te bekijken hoe druk het op een bepaalde route is. Stil staan met de motor aan zorgt voor veel uitlaatgassen. Mensen worden ook steeds bewuster van de uitstoot van de auto. Zo kiezen mensen steeds sneller voor de fiets, het openbaar vervoer en samen reizen zoals carpoolen.</p>
+                        <p><a href="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2015/09/slide_1.jpg"><img class="wp-image-14 alignnone" src="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2015/09/slide_1-300x127.jpg" alt="slide_1" width="543" height="230"></a></p>
+                        <p>De ontwikkeling van automatisering binnen en om het huis (domotica) zorgt er voor dat er op consument niveau veel te besparen is. Zo is er Nest, de slimme thermostaat. Nest houdt bij wanneer je thuis bent en gebruikt dit om te voorspellen wanneer je thuis gaat zijn. Dit betekent dat het huis niet warm wordt gehouden als je er niet bent, maar ook niet koud is als je er wel bent. Door in te spelen op patronen kan dit wel 20% energiezuiniger zijn dan de traditionele thermostaat. Denk ook aan sprinkler installaties in de tuin, die elke dag een aantal keer gedurende een bepaalde tijd aangaan. Door middel van techniek kun je ervoor zorgen dat dit niet standaard gebeurt, maar bijvoorbeeld alleen als het lang droog is.</p>
+                        <p>&nbsp;</p>
+                        <p>Een groot gedeelte van de CO<sub>2</sub> uitstoot wordt veroorzaakt door niet goed geïsoleerde gebouwen en huizen. Door te meten welke gebouwen de meeste kou- en warmtelekken hebben en waar deze zitten kan er veel worden bespaard op de stookkosten en uitstoot.</p>
+                        <p>&nbsp;</p>
+                        <h1>Mogelijke projecten</h1>
+                        <p>Er zijn veel oorzaken van het broeikaseffect. Gelukkig zijn er ook net zo veel mogelijke oplossingen. Door deze te onderzoeken, zijn wij op een aantal mogelijke projecten uitgekomen die we kunnen ontwikkelen om te helpen dit wereldwijde probleem te bevechten.</p>
+                        <p>&nbsp;</p>
+                        <h2>Een drone die bossen plant – “Guerrilla Gardening”</h2>
+                        <p>In het verleden zijn er experimenten geweest met een C-130 transportvliegtuig. Deze werd voorzien met speciale uitrusting om “bommen” met zaden voor bomen te planten. Hierdoor werd het mogelijk om in korte tijd in verafgelegen gebieden veel bomen tegelijk te planten. <a href="http://www.trueactivist.com/seed-bombers-can-plant-an-entire-forest-of-900000-trees-a-day/">[bron]</a></p>
+                        <p><a href="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2015/09/c130.jpg"><img class="wp-image-15 alignnone" src="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2015/09/c130-300x195.jpg" alt="c130" width="392" height="255"></a></p>
+                        <p>Door op een eenvoudige wijze snel en veel bomen te planten, kunnen we koolstofmonoxide productie tegengaan, doordat de geplante bomen dit omzetten in zuurstof. Een probleem wat we hier zullen ondervinden is dat deze bomen zonder zonlicht precies het tegenovergestelde doen; zuurstof omzetten in koolstofmonoxide. Hier kunnen we gebruik maken van genetisch-gemodificeerde bomen <a href="http://www.dailytech.com/Researchers+Fight+Global+Warming+with+Genetically+Altered+Trees+/article19776.htm">[bron]</a> die dit in verminderde mate doen, maar wij zullen ons richten op het afleveren van de zaden, niet de productie ervan. We kunnen drones ontwikkelen die een matrix van bomen te planten. Ze landen, duwen zaden de grond in, en vliegen naar de volgende locatie.</p>
+                        <p>&nbsp;</p>
+                        <h2>Uitstoot-meter</h2>
+                        <p>In een poging om bewustheid te genereren, kunnen we een klein apparaat ontwikkelen die aan uitlaten van motorische voertuigen bevestigd wordt. In het dashboard van de auto wordt dan weergegeven hoeveel de auto uitgestoten heeft, en hoeveel schade dit is vergeleken met de gemiddelde gehele uitstoot. Hierdoor verwachten wij dat mensen meer bewust worden van hun persoonlijke toevoeging aan het broeikaseffect, waardoor zij misschien vaker zullen kiezen om met energiezuinige oplossingen te reizen.</p>
+                        <h2>Pile o’ Coal</h2>
+                        <p>Veel mensen hebben tegenwoordig Eneco’s “Toon” of een gelijksoortig apparaat in huis. Deze apparaten laten je energieverbruik zien, maar focussen meestal op het financieel aspect voor de eindgebruiker. We kunnen dit idee uitbreiden door ook weer te geven hoeveel kool nodig geweest is dit op te wekken, of hoeveel uranium verbruikt is in een fusiereactor (waarbij we als bijeffect de efficiëntie van kool/gas t.o.v. kernenergie aantonen). Hierdoor worden gebruikers geconfronteerd met hun toevoeging aan de vervuiling van de atmosfeer.</p>
+                        <p><a href="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2015/09/l_Eneco_toon_afstand_b_5113bafcc3974.jpg"><img class="wp-image-16 alignnone" src="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2015/09/l_Eneco_toon_afstand_b_5113bafcc3974-300x200.jpg" alt="l_Eneco_toon_afstand_b_5113bafcc3974" width="462" height="308"></a></p>
+                        <h2>Besparings-meter</h2>
+                        <p>Het tegenovergestelde van de uitstoot-meter; Een apparaat bevestigd aan een fiets die meet hoeveel koolstofmonoxide-uitstoot je <u>niet</u> veroorzaakt hebt door de fiets te nemen. Een wat positievere oplossing, waardoor mensen meer gemotiveerd worden om vaker de fiets te nemen. In het gunstigste geval kan dit zelfs wedstrijden veroorzaken; Wie bespaart het meest?</p>
+                        <h2>Ultravioletkaart</h2>
+                        <p>Een oplossing met minder hardware is een (web-)applicatie die een overlay genereert over een kaart van je omgeving (via Google Maps) waarop te zien is hoeveel de ozonlaag in jouw gebied aangetast is, en hoeveel CO<sub>2</sub> er in jouw omgeving aanwezig is. Eventueel uit te breiden met een UV-sensor die de sterkte van Uv-straling bij jouw huis meet. Dit wordt weergegeven op een grafiek om verschillen per dag of maand duidelijk te maken, en te vergelijken met het gemiddelde voor jouw regio en de hele wereld.</p>
+                        <h3>Regio-efficiëntie</h3>
+                        <p>Installaties per regio/stad/dorp die meten hoeveel een straat verbruikt aan gas en stroom. Scoort de regio beter, dan heeft dit een positief effect op de woning belasting. Dit wordt aangekondigd, met als bericht dat betere isolatie, zonnepanelen en zuinigere apparaten je geld gaan besparen op je woning belasting. Hierdoor krijgen mensen een financiële reden om zuiniger te leven.<br>
+                            Wij zullen één van deze oplossingen verder ontwikkelen en een prototype maken.</p>
+                        <h3><b>Conclusie</b></h3>
+                        <p><span style="font-weight: 400;">Dat de aarde met een relatief hoog tempo verwarmt is dus al een behoorlijke tijd bekend. De grootste oorzaken van de uitstoot van broeikasgassen, waardoor de aarde uiteindelijk warmer wordt, liggen bij de mens. Vooral door het gebruik van fossiele brandstoffen, de landbouw/veeteelt en ontbossing brengen wij onszelf in de problemen.</span></p>
+                        <p><span style="font-weight: 400;">Maar de ontwikkeling van de opwarming hebben we toch echt deels zelf in de hand! Gelukkig zijn er al veel mensen van over de hele wereld bezig met het ontwikkelen van oplossingen en voorzorgsmaatregelen. Dit gebeurd op veel verschillende manieren zoals het behouden van flora, recycling, alternatieve brandstoffen en automatisering.</span></p>
+                        <p>Zo zijn er ook veel projecten waar wij als team perspectief in zien. Of projecten waar wij denken ons steentje aan bij te kunnen dragen. Vooral op het gebied van preventie van overmatige uitstoot zien we kansen liggen. We hopen uiteindelijk mensen bewuster te laten worden van hun doen en laten. En daarnaast ook mensen geld te laten besparen door duurzamer te leven met behulp van bijpassende producten of diensten.</p>
+                        <p>Door:<br>
+                            <span style="font-weight: 400;">Plaisir Nzuzi</span><span style="font-weight: 400;"><br>
+</span><span style="font-weight: 400;">Ian Wensink</span><span style="font-weight: 400;"><br>
+</span><span style="font-weight: 400;">Tim Falken</span><span style="font-weight: 400;"><br>
+</span><span style="font-weight: 400;">Tom Maarleveld</span></p>
+                        <h3>Bronnen</h3>
+                        <p><a href="https://nl.wikipedia.org/wiki/Opwarming_van_de_Aarde">https://nl.wikipedia.org/wiki/Opwarming_van_de_Aarde</a></p>
+                        <p><a href="https://www.youtube.com/watch?v=McRYTC56DC4">https://www.youtube.com/watch?v=McRYTC56DC4</a></p>
+                        <p><a href="http://www.nrc.nl/nieuws/2015/06/04/wetenschappers-opwarming-aarde-helemaal-niet-gestopt-begin-deze-eeuw/">http://www.nrc.nl/nieuws/2015/06/04/wetenschappers-opwarming-aarde-helemaal-niet-gestopt-begin-deze-eeuw/</a></p>
+                        <p><a href="https://nl.wikipedia.org/wiki/Aerosol">https://nl.wikipedia.org/wiki/Aerosol<br>
+                        </a><a href="http://klimaatgek.nl/wordpress/klimaatverandering/">http://klimaatgek.nl/wordpress/klimaatverandering/</a></p>
+                        <p><a href="https://nl.wikipedia.org/wiki/Broeikaseffect">https://nl.wikipedia.org/wiki/Broeikaseffect</a></p>
+                        <p><a href="http://www.biocycle.net/2004/08/15/biosolids-and-global-warming-evaluating-the-management-impacts/">http://www.biocycle.net/2004/08/15/biosolids-and-global-warming-evaluating-the-management-impacts/</a></p>
+                        <p><a href="http://www.climatehotmap.org/about/global-warming-causes.html">http://www.climatehotmap.org/about/global-warming-causes.html</a></p>
+                        <p><a href="http://www.rwsleefomgeving.nl/onderwerpen/broeikasgassen/landbouw/">http://www.rwsleefomgeving.nl/onderwerpen/broeikasgassen/landbouw/</a></p>
+                        <p><a href="http://www.milieucentraal.nl/klimaat-en-aarde/energiebronnen/kolen-olie-en-gas/">http://www.milieucentraal.nl/klimaat-en-aarde/energiebronnen/kolen-olie-en-gas/</a></p>
+                        <p><a href="http://www.agriholland.nl/dossiers/klimaatverandering/home.html#oorzaken">http://www.agriholland.nl/dossiers/klimaatverandering/home.html#oorzaken</a></p>
+                        <p><a href="http://www.wnf.nl/nl/wat_wnf_doet/thema_s/bossen/ontbossing/klimaatverandering/">http://www.wnf.nl/nl/wat_wnf_doet/thema_s/bossen/ontbossing/klimaatverandering/</a></p>
+                        <p><a href="http://www.nu.nl/wetenschap/2974186/ontbossing-brazilie-van-ongekende-omvang.html">http://www.nu.nl/wetenschap/2974186/ontbossing-brazilie-van-ongekende-omvang.html</a></p>
+
+                </section>
+
+                <section id="" class="mdl-card content-card text-card mdl-shadow--2dp">
+                    <h1>Adopt a project (Research)</h1><br>
+                        <p>Bij&nbsp;de kick-off kregen als eerst de opdracht om een domein uit te zoeken en vervolgens een wetenschappelijk artikel te schrijven over dit domein.<br>
+                            Allereerst zijn we op zoek gegaan&nbsp;naar bestaande projecten met het oog op een overkoepelend domein.</p>
+                        <p><strong>Brainstormen</strong><br>
+                            Zo hebben we een document opgesteld en zijn we individueel op zoek gegaan naar projecten of problemen die ons aanspraken. Daarna hebben we gezamenlijk gefilterd om uiteindelijk op domein uit te komen waar we allemaal perspectief in zagen.<br>
+                            Zie <strong><a href="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2015/10/BrainstormArtikelProjectIfN.pdf">hier</a></strong>&nbsp;het brainstormdocument. Het document is wat rommelig maar het idee was ook om gewoon je eerste bevindingen in dit document te plakken.<br>
+                            Een aantal interessante onderwerpen waren Stroperij, uitstoot van koolstofdioxide, stijgen van de zeespiegel, anti-slangengif of afvalverbranding.</p>
+                        <p><strong>Global Warming</strong><br>
+                            Uiteindelijk hebben we voor Global Warming gekozen. Dit was niet direct één van de opties in het document, maar onderdelen hiervan kwamen wel vaak terug als mogelijke opties. Daarom besloten we om het overkoepelende domein te kiezen hiervan.</p>
+                </section>
+        </div>
+        <div aria-live="assertive" aria-atomic="true" aria-relevant="text" class="mdl-js-snackbar"></div>
+    </main>
+</div>
+<script src="js/lib/jquery.min.js"></script>
+<script src="js/lib/jgestures.min.js"></script>
+<script src="js/lib/material.min.js"></script>
+<script src="js/lib/material.add.min.js"></script>
+<script src="js/lib/APIFunctions.js"></script>
+<script src="js/script.js"></script>
+<script>
+
+</script>
+</body>
+</html>

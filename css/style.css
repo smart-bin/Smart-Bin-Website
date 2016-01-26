@@ -4,22 +4,22 @@ html, body, ul, li, h1, h2, h3, p:last-child {
 }
 
 body {
-    font-family: "Roboto";
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
     font-weight: 300;
+}
+
+h1 {
+    font-size: 21px;
+    margin-bottom: 8px;
 }
 
 .mdl-layout {
     transform: translate3d(0, 0, 0);
+    min-width: 300px;
 }
 
 .mdl-layout__content {
     background-color: #eee;
-}
-
-@media screen and (max-width: 700px) {
-    .mdl-layout__header-row nav {
-        display: none;
-    }
 }
 
 /* LAYOUTS */
@@ -112,12 +112,21 @@ body.white-background .mdl-layout__content {
     background-color: #e5e5e5;
 }
 
+.mdl-layout__drawer-button {
+    display: none;
+}
+
 .mdl-layout__header-row {
-    max-width: 900px;
-    width: 100%;
+    max-width: 916px;
+    width: calc(100% + 0px);
     margin: 0 auto;
-    padding-left: 0;
-    padding-right: 0;
+    position: relative;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.mdl-layout-title {
+    transition: all 0.2s ease-in-out;
 }
 
 .page-content {
@@ -134,6 +143,9 @@ body.white-background .mdl-layout__content {
     width: 100%;
     margin-top: -1px;
     display: none;
+    z-index: -1;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
 }
 
 .mdl-layout__header-row .submenu-container:hover .submenu {
@@ -145,11 +157,11 @@ body.white-background .mdl-layout__content {
     text-decoration: none;
     width: 100%;
     display: block;
-    padding: 8px;
+    padding: 8px 8px 8px 24px;
     box-sizing: border-box;
 }
 
-.mdl-layout__header-row .submenu a:hover {
+.mdl-layout__header-row .submenu a:hover, .mdl-layout__header-row .submenu-container:hover .has-submenu {
     background-color: rgba(0, 0, 0, 0.2);
 }
 
@@ -244,14 +256,23 @@ body.white-background .mdl-layout__content {
     padding-bottom: 4px;
 }
 
-.text-card {
+.text-card, .content-card {
     padding: 16px;
 }
 
 .text-card.mdl-card .mdl-card__supporting-text {
     position: absolute;
-    padding: 8px 16px;
+    padding: 8px;
     width: calc(100% - 32px);
+}
+
+.content-card .mdl-card__supporting-text {
+    padding: 0;
+}
+
+.nopm {
+    margin: 0;
+    padding: 0;
 }
 
 /* APP PAGE */
@@ -268,7 +289,7 @@ body.white-background .mdl-layout__content {
     padding: 8px;
 }
 
-#phone-embed > div {
+#phone-embed #phone-frame-container {
     padding: 82px 0 82px 17px;
     background-image: url("../img/nexus_5x.png");
     background-size: 100%;
@@ -280,28 +301,44 @@ body.white-background .mdl-layout__content {
     height: 642px;
 }
 
+#app .mdl-card__supporting-text {
+    padding: 0px;
+}
+
+#phone-embed #no-phone-container {
+    padding: 8px;
+}
+
+#phone-embed #no-phone-container div {
+    margin-top: 8px;
+}
+
 .embed-controls {
     width: calc(100% - 419px);
     float: left;
     box-sizing: border-box;
     padding: 16px;
-    min-width: 411px;
+}
+
+.embed-controls form {
+    display: flex;
 }
 
 .embed-controls .mdl-textfield {
-    width: 75%;
-    max-width: 350px;
+    flex-grow: 1;
+    margin-right: 8px;
 }
 
 .embed-controls button {
-    position: absolute;
-    right: 16px;
-    margin-top: 16px;
+    flex-grow: 0;
+    position: relative;
+    margin-top: 10px;
+    min-width: 100px;
 }
 
 .embed-controls-header {
     position: relative;
-    max-width: 458px;
+    /*max-width: 458px;*/
 }
 
 #refresh-bin-list {
@@ -326,14 +363,23 @@ body.white-background .mdl-layout__content {
 }
 
 @media screen and (max-width: 862px) {
-    .embed-controls {
-        float: none;
-    }
+
 }
 
 /* HOME */
-.intro-card {
+.row-flex {
+    display: flex;
+}
+
+.col-flex {
+    flex: 1;
+}
+
+#intro-image {
     padding: 8px;
+}
+
+.intro-card {
     width: 442px;
     float: left;
 }
@@ -344,4 +390,54 @@ body.white-background .mdl-layout__content {
 
 .intro-card img {
     width: 100%;
+}
+
+#categories-list li {
+    padding-left: 16px;
+}
+
+#concept {
+    margin-right: 8px;
+}
+
+#statistics-screen {
+    padding: 8px;
+}
+
+#statistics-screen img {
+    width: 100%;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.content-card li {
+    margin-left: 16px;
+}
+
+@media screen and (max-width: 700px) {
+    .mdl-layout__header-row {
+        padding-left: 72px !important;
+        padding-right: 16px !important;
+    }
+
+    .mdl-layout__header-row nav {
+        display: none !important;
+    }
+
+    .mdl-card {
+        width: 100% !important;
+        min-width: initial !important;
+        float: none !important;
+    }
+
+    .mdl-layout__drawer-button {
+        display: initial !important;
+    }
+
+    .row-flex {
+        display: block;
+    }
 }

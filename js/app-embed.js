@@ -3,6 +3,8 @@ function initAppEmbed() {
     $("#refresh-bin-list").on("click", getBins);
     getUser();
     getBins();
+    toggleMobile();
+    $(window).on("resize", toggleMobile);
 }
 
 function createUser() {
@@ -29,11 +31,16 @@ function createUser() {
                                 $("iframe").attr("src", "http://project.hosted.hr.nl/2015_2016/mtnll_mt2b_t3/Website/setNewUserId.php?id=" + user.UserId);
                                 button.removeAttr("disabled");
                                 getUser();
+                                getBins();
                             }
                         });
                     });
                 }
             });
+        }
+        else {
+            button.removeAttr("disabled");
+            $("#new-user-name").focus();
         }
     }
 }
@@ -92,5 +99,15 @@ function updateBinWeight() {
             $(".is-dirty").removeClass("is-dirty");
             componentHandler.upgradeAllRegistered();
         });
+    }
+}
+
+function toggleMobile() {
+    if (checkIfMobile()) {
+        $("#phone-embed #phone-frame-container").addClass("hidden");
+        $("#phone-embed #no-phone-container").removeClass("hidden");
+    } else {
+        $("#phone-embed #phone-frame-container").removeClass("hidden");
+        $("#phone-embed #no-phone-container").addClass("hidden");
     }
 }

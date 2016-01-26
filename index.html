@@ -33,8 +33,8 @@
                 <div class="mdl-layout-spacer"></div>
                 <nav class="mdl-navigation">
                     <a class="mdl-navigation__link active" href="index.html"><span>Home</span></a>
-                    <div class="submenu-container">
-                        <a for="categories-submenu" class="mdl-navigation__link has-submenu" href="categories.html"><span>Categorieën</span></a>
+                    <div class="submenu-container mdl-color--primary">
+                        <a for="categories-submenu" class="mdl-navigation__link has-submenu" href="#"><span>Categorieën</span></a>
                         <ul id="categories-submenu" class="submenu mdl-color--primary mdl-shadow--2dp">
                             <li><a href="category-app.html"><span>App</span></a></li>
                             <li><a href="category-api.html"><span>API</span></a></li>
@@ -43,7 +43,6 @@
                             <li><a href="category-misc.html"><span>Overig</span></a></li>
                         </ul>
                     </div>
-                    <a class="mdl-navigation__link" href="concept.html"><span>Concept</span></a>
                     <a class="mdl-navigation__link" href="about.html"><span>Over ons</span></a>
                     <a class="mdl-navigation__link" href="app.html"><span>De app</span></a>
                 </nav>
@@ -52,8 +51,7 @@
         <div class="mdl-layout__drawer dis-visible">
             <nav class="mdl-navigation">
                 <a class="mdl-navigation__link active" href="index.html"><i class="material-icons">home</i><span>Home</span></a>
-                <a class="mdl-navigation__link" href="categories.html"><i class="material-icons">list</i><span>Categorieën</span></a>
-                <a class="mdl-navigation__link" href="concept.html"><i class="material-icons">delete</i><span>Concept</span></a>
+                <a class="mdl-navigation__link" href="#"><i class="material-icons">list</i><span>Categorieën</span></a>
                 <a class="mdl-navigation__link" href="about.html"><i class="material-icons">info</i><span>Over ons</span></a>
                 <a class="mdl-navigation__link" href="app.html"><i class="material-icons">apps</i><span>De app</span></a>
             </nav>
@@ -61,11 +59,51 @@
         <main class="mdl-layout__content">
             <div class="page-content">
                 <div id="home">
-                    <section class="mdl-card intro-card mdl-shadow--2dp">
-                        <img src="img/Smart-Bin-v2_m_s.png" alt="">
-                    </section>
-                    <section class="mdl-card intro-card mdl-shadow--2dp">
-                    </section>
+                    <div class="row-flex">
+                        <section id="intro-image" class="mdl-card intro-card mdl-shadow--2dp col-flex">
+                            <img src="img/Smart-Bin-v2_m_s.png" alt="">
+                        </section>
+                        <section class="mdl-card intro-card content-card mdl-shadow--2dp col-flex">
+                            <div class="mdl-card__supporting-text">
+                                <p>
+                                    Welkom op het blog van team 3 - Project Smart Bin! Kom meer te weten over het <a href="#concept">concept</a>, <a href="category-team.html">lees</a> over hoe ons prototype tot stand is gekomen en test <a href="app.html">de app</a>.
+                                </p>
+                                <p class="nopm">Onze blogposts zijn onderverdeeld in een aantal categorieën:</p>
+                                <ul id="categories-list">
+                                    <li><a href="category-app.html"><span>App</span></a></li>
+                                    <li><a href="category-api.html"><span>API</span></a></li>
+                                    <li><a href="category-bin.html"><span>Bin</span></a></li>
+                                    <li><a href="category-team.html"><span>Team</span></a></li>
+                                    <li><a href="category-misc.html"><span>Overig</span></a></li>
+                                </ul>
+                                <p></p>
+                                <p>
+                                    Plaisir Nzuzi, Ian Wensink, Tim Falken, Tom Maarleveld
+                                </p>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="row-flex">
+                        <section id="concept" class="mdl-card content-card mdl-shadow--2dp col-flex">
+                            <article>
+                                <h1>Het concept</h1>
+                                <div>
+                                    <p>
+                                       Al het restafval wat je weggooit wordt verbrand. Alle gassen die daarbij vrijkomen hebben een slechte invloed op het milieu, waardoor de aarde langzaam opwarmt. Project Smart Bin wil hier verandering in brengen. Anno 2016 zijn er nog veel te veel mensen die denken dat recyclen geen zin heeft, of die het teveel gedoe vinden terwijl het niets op lijkt te leveren. Met onze prullenbak in combinatie met de <a href="app.html">Smart Bin App</a> zijn die smoesjes verleden tijd.
+                                    </p>
+                                    <p>
+                                        De Smart Bin onderscheidt zich van gewone prullenbakken door zijn gewichtsensor. Deze meet verandering in gewicht, wat vervolgens wordt opgeslagen in jouw account. Op deze manier kunnen wij voor jou onzichtelijk maken hoeveel je weggooit en dus ook hoeveel je recyclet. Daarbij is deze data beschikbaar voor ontwikkelaars om te verwerken in bijvoorbeeld mobiele applicaties en spelletjes. Zo kan het dus zijn dat jij een level verder komt doordat je die dag genoeg papier hebt verzameld.
+                                    </p>
+                                    <p>
+                                        Het idee is dus dat je voor elke soort afval die jij apart in wilt gaan zamelen (voor nu keuze uit restafval, plastic, GFT en papier) een Smart Bin aanschaft en die koppelt aan jouw account. Zo wordt er per afvalsoort inzichtelijk gemaakt hoeveel je van die soort hebt verzameld.
+                                    </p>
+                                </div>
+                            </article>
+                        </section>
+                        <section class="mdl-card mdl-shadow--2dp col-flex" id="statistics-screen">
+                            <img src="img/Screen_statistics-page.png" alt="">
+                        </section>
+                    </div>
                 </div>
             </div>
             <div aria-live="assertive" aria-atomic="true" aria-relevant="text" class="mdl-js-snackbar"></div>

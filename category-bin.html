@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+    <title>Blogposts - Project Smart Bin</title>
+    <meta name="description" content="">
+
+    <!-- Mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+    <!-- Chrome / Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="black">
+    <link rel="icon" href="icon.png">
+
+    <link rel="stylesheet" href="css/lib/material.color.min.css">
+    <link rel="stylesheet" href="css/lib/material.min.css">
+    <link rel="stylesheet" href="css/lib/material-icons.css">
+    <link rel="stylesheet" href="css/lib/roboto.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="cards">
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <div id="loader" class="spinner hidden hide">
+        <div class="mdl-shadow--4dp">
+            <div class="mdl-spinner mdl-spinner--single-color mdl-js-spinner is-active"></div>
+        </div>
+    </div>
+    <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+            <span class="mdl-layout-title">Blog - Bin</span>
+            <div class="mdl-layout-spacer"></div>
+            <nav class="mdl-navigation">
+                <a class="mdl-navigation__link" href="index.html"><span>Home</span></a>
+                <div class="submenu-container mdl-color--primary">
+                    <a for="categories-submenu" class="mdl-navigation__link has-submenu active" href="#"><span>Categorieën</span></a>
+                    <ul id="categories-submenu" class="submenu mdl-color--primary mdl-shadow--2dp">
+                        <li><a href="category-app.html"><span>App</span></a></li>
+                        <li><a href="category-api.html"><span>API</span></a></li>
+                        <li><a href="category-bin.html"><span>Bin</span></a></li>
+                        <li><a href="category-team.html"><span>Team</span></a></li>
+                        <li><a href="category-misc.html"><span>Overig</span></a></li>
+                    </ul>
+                </div>
+                <a class="mdl-navigation__link" href="about.html"><span>Over ons</span></a>
+                <a class="mdl-navigation__link" href="app.html"><span>De app</span></a>
+            </nav>
+        </div>
+    </header>
+    <div class="mdl-layout__drawer dis-visible">
+        <nav class="mdl-navigation">
+            <a class="mdl-navigation__link" href="index.html"><i class="material-icons">home</i><span>Home</span></a>
+            <a class="mdl-navigation__link active" href="#"><i class="material-icons">list</i><span>Categorieën</span></a>
+            <a class="mdl-navigation__link" href="about.html"><i class="material-icons">info</i><span>Over ons</span></a>
+            <a class="mdl-navigation__link" href="app.html"><i class="material-icons">apps</i><span>De app</span></a>
+        </nav>
+    </div>
+    <main class="mdl-layout__content">
+        <div class="page-content">
+            <div id="">
+                <section id="" class="mdl-card content-card text-card mdl-shadow--2dp">
+                    <h1></h1><br>
+
+                </section>
+
+                <section id="" class="mdl-card content-card text-card mdl-shadow--2dp">
+                    <h1></h1><br>
+                    <div class="entry-content">
+                        <p>We zijn weer een stap verder met de arduino en het maken van een werkende smartbin! We hebben het nu voor elkaar gekregen om via de sensor data door te sturen naar de API. We hebben de arduino zo geprogrammeerd dat wanneer er voor 500 of meer kW aan kracht wordt uitgevoerd op de sensor, dat de arduino een vaste hoeveelheid van 3kg doorstuurt naar de API.<br>
+                            Hieronder het filmpje;</p>
+                        <div style="width: 584px; " class="wp-video"><!--[if lt IE 9]><script>document.createElement('video');</script><![endif]-->
+                        <video width="320" height="240" controls>
+                            <source src="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2016/01/ArduinoAchievement.mp4?_=1" type="video/mp4">
+                        </video>
+                        <p>Op het filmpje zie je dat we twee keer 3kg doorsturen. Vervolgens zie je direct resultaat doordat we een achievement hebben gehaald op de mobiele app!</p>
+                        <p>De volgende stap is om daadwerkelijk de kracht op de sensor om te zetten in kg en deze gegevens door te sturen naar de API.</p>
+                    </div>
+                </section>
+
+                <section id="" class="mdl-card content-card text-card mdl-shadow--2dp">
+                    <h1></h1><br>
+                        <p>Vandaag hielden wij een Skype bijeenkomst met elkaar om te werken aan de Arduino code en we zijn weer een iteratie verder. Het is ons gelukt om de WiFi shield te connecteren aan een netwerk. Waar wij nog wel moeite mee hebben is om data te versturen naar de API van Tim. Zodra ons dit gelukt is, schrijven wij er weer een post over, met een foto van de code.</p>
+                </section>
+
+                <section id="" class="mdl-card content-card text-card mdl-shadow--2dp">
+                    <h1>Iteratie 1: Arduino</h1><br>
+                        <p>Afgelopen week zijn wij begonnen met de eerste iteratie van de Arduino. Het doel was om de druksensor werkend te krijgen en om data terug te vragen daarvan. Dit is voor het fysieke product de basis van de prullenbak.</p>
+                        <p>De arduino is aangesloten op de computer via een kabel. Het sensortje hebben wij ook aangesloten op de arduino. Als wij wat druk leggen op het sensortje, brand er een lampje op de arduino en op de computer is dan te zien dat wij waardes terugkrijgen hiervan.</p>
+                        <p>Hieronder is een kort filmpje en een screenshot van de code te zien.</p>
+                        <video width="320" height="240" controls>
+                            <source src="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2015/12/20151208_100416.mp4?_=2" type="video/mp4">
+                        </video>
+                        <p><a href="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2015/12/Schermopname-68-e1449832966435.png"><img class="alignnone size-medium wp-image-187" src="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2015/12/Schermopname-68-e1449832966435-300x100.png" alt="Schermopname (68)" width="300" height="100"></a></p>
+                        <p>&nbsp;</p>
+                        <p>De volgende stap is om de data op te slaan in een database. Er moet elke minuut gekeken worden of het gewicht groter/kleiner is en als dat zo is, wordt het geüpdatet in de database.</p>
+                </section>
+
+                <section id="" class="mdl-card content-card text-card mdl-shadow--2dp">
+                    <h1>Force Sensor</h1><br>
+                        <p>We zijn nu op het punt dat we het concept ver genoeg hebben uitgedacht. Het is nu dus tijd om het prototype van de Smart-Bin ook daadwerkelijk te gaan bouwen. We hebben ervoor gekozen om met arduino te gaan werken. Na een gesprek met onze expert Leo Romeijn hebben we ook een sensor uitgezocht, namelijk een “Force Sensing Resistor”.</p>
+                        <p><a href="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2016/01/interlink-15-square-fsr_3.jpg"><img class="alignnone wp-image-195" src="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2016/01/interlink-15-square-fsr_3-300x300.jpg" alt="interlink-15-square-fsr_3" width="274" height="269"></a></p>
+                        <p>De sensor hebben we besteld via www.antratek.nl, zodra we hem binnen hebben kunnen we beginnen met het programmeren van de arduino!</p>
+                </section>
+
+                <section id="" class="mdl-card content-card text-card mdl-shadow--2dp">
+                    <h1></h1><br>
+                        <p>Dinsdagmiddag zijn Tim en Ian bezig geweest met de prullenbak. Zij hebben het 3D design uitgeprint in een 3D prullenbak. En ik moet zeggen, het ziet er goed uit:</p>
+                        <p><a href="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2015/10/IMG-20151027-WA0004.jpg"><img class="alignnone size-medium wp-image-138" src="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2015/10/IMG-20151027-WA0004-300x169.jpg" alt="IMG-20151027-WA0004" width="300" height="169"></a> <a href="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2015/10/IMG-20151027-WA0005.jpg"><img class="alignnone size-medium wp-image-139" src="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2015/10/IMG-20151027-WA0005-300x169.jpg" alt="IMG-20151027-WA0005" width="300" height="169"></a> <a href="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2015/10/IMG-20151027-WA0007.jpg"><img class="alignnone size-medium wp-image-140" src="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2015/10/IMG-20151027-WA0007-300x169.jpg" alt="IMG-20151027-WA0007" width="300" height="169"></a> <a href="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2015/10/IMG-20151027-WA0010.jpg"><img class="alignnone size-medium wp-image-141" src="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2015/10/IMG-20151027-WA0010-300x169.jpg" alt="IMG-20151027-WA0010" width="300" height="169"></a> <a href="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2015/10/IMG-20151027-WA0011.jpg"><img class="alignnone size-medium wp-image-142" src="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2015/10/IMG-20151027-WA0011-300x169.jpg" alt="IMG-20151027-WA0011" width="300" height="169"></a> <a href="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2015/10/IMG-20151027-WA0012.jpg"><img class="alignnone size-medium wp-image-143" src="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2015/10/IMG-20151027-WA0012-300x169.jpg" alt="IMG-20151027-WA0012" width="300" height="169"></a> <a href="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2015/10/IMG-20151027-WA0013.jpg"><img class="alignnone size-medium wp-image-144" src="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2015/10/IMG-20151027-WA0013-300x169.jpg" alt="IMG-20151027-WA0013" width="300" height="169"></a></p>
+                        <p>Meer volgt…</p>
+                </section>
+
+                <section id="" class="mdl-card content-card text-card mdl-shadow--2dp">
+                    <h1>Ontwerp prullenbak 2.0</h1><br>
+                        <p>De week na de presentatie kwamen wij bij elkaar en hadden wij een update moment met Stan. Hier kregen wij te horen dat wij een 5 als voorlopig cijfer hadden. Na het clickable prototype en de user stories krijgen wij ons eindcijfer voor dit kwartaal.</p>
+                        <p><a href="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2015/10/GarbageCan_3D_AI_closed1.png"><img class="alignnone size-medium wp-image-127" src="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2015/10/GarbageCan_3D_AI_closed1-300x256.png" alt="GarbageCan_3D_AI_closed" width="300" height="256"></a></p>
+                        <p>Wij keken toen weer naar het ontwerp van de prullenbak hierboven. Wij kwamen toen tot besef dat de prullenbak er op ware grootte erg groot uit zou zien. Het zou de breedte van ongeveer een 40″ TV hebben en het zou iets hoger zijn dan de gemiddelde prullenbak. Dit is natuurlijk niet praktisch, het moet/kan veel compacter. Daarom hadden wij toen besloten om weer aan het ontwerp van de prullenbak te werken, in onze achterhoofd houden dat wij het dit keer vierkant maken en niet rechthoekig. Dit neemt dan al aanzienlijk minder ruimte in.</p>
+                        <p><strong>NOTE:&nbsp;</strong>Na de sessie met Stan dachten wij na over een andere functionaliteit van de prullenbak. In plaats van om 1 grote bak te hebben met kleine bakken, willen wij 1 hoofdbak maken met een aantal subbakken. Deze subbakken kun je dan in je slaapkamer, werkkamer, keuken, gangpad etc neerzetten. Zo wordt de ruimte van de prullenbak beter verdeeld. Wij stemden er allemaal mee in dat wij hiermee verder zouden gaan. Dit is ten slotte een ander system dan 1 grote bak. Hiervoor moeten de kleine bakken geconnecteerd blijven met de hoofdbak. De hoofdbak stuurt dan data door naar je smartphone.</p>
+                        <p>In de vakantie werkte Tim aan het nieuwe design van de prullenbak. Hieronder zijn een aantal basistekeningen:</p>
+                        <p><a href="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2015/10/IMG-20151027-WA0000.jpg"><img class="alignnone size-medium wp-image-132" src="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2015/10/IMG-20151027-WA0000-300x169.jpg" alt="IMG-20151027-WA0000" width="300" height="169"></a> <a href="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2015/10/IMG-20151027-WA0001.jpg"><img class="alignnone size-medium wp-image-133" src="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2015/10/IMG-20151027-WA0001-300x169.jpg" alt="IMG-20151027-WA0001" width="300" height="169"></a> <a href="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2015/10/IMG-20151027-WA0009.jpg"><img class="alignnone size-medium wp-image-134" src="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2015/10/IMG-20151027-WA0009-300x169.jpg" alt="IMG-20151027-WA0009" width="300" height="169"></a></p>
+                        <p>Na de vakantie hadden wij weer een peermoment met elkaar en keken wij naar de bak. De tekeningen zagen er goed uit. Hieronder is een foto van de prullenbak in 3D:</p>
+                        <p><a href="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2015/10/IMG-20151027-WA0002.jpg"><img class="alignnone size-medium wp-image-135" src="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2015/10/IMG-20151027-WA0002-300x169.jpg" alt="IMG-20151027-WA0002" width="300" height="169"></a></p>
+                        <p>&nbsp;</p>
+                </section>
+
+                <section id="" class="mdl-card content-card text-card mdl-shadow--2dp">
+                        <h1>Update: Ontwerp Prullenbak</h1>
+                        <p>Aan het ontwerp van de prullenbak is goed nagedacht. Het eerste concept was om één grote bak te maken met erin meerdere bakken waarin je je vuil kon doen. Het begon allemaal bij de volgende basistekeningen:</p>
+                        <p><a href="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2015/10/afvalbak-vooraanzicht-doorsnee.png"><img class="alignnone size-medium wp-image-126" src="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2015/10/afvalbak-vooraanzicht-doorsnee-300x300.png" alt="afvalbak vooraanzicht + doorsnee" width="300" height="300"></a></p>
+                        <p>Aan de voorkant had je een paar toetsen en in de grote bak zaten 3 kleinere bakken voor plastic, glas en restafval. Maar bij dit ontwerp wordt de ruimte van de buitenbak niet goed benut, dus werd er opnieuw gewerkt aan een ander ontwerp, maar wel op basis van dit ontwerp. Vervolgens kwamen wij met de volgende versie van het ontwerp:</p>
+                        <p><a href="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2015/10/GarbageCan_3D_AI_closed1.png"><img class="alignnone size-medium wp-image-127" src="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2015/10/GarbageCan_3D_AI_closed1-300x256.png" alt="GarbageCan_3D_AI_closed" width="300" height="256"></a> <a href="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2015/10/GarbageCan_3D_AI_closeupweight.png"><img class="alignnone size-medium wp-image-128" src="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2015/10/GarbageCan_3D_AI_closeupweight-300x213.png" alt="GarbageCan_3D_AI_closeupweight" width="300" height="213"></a> <a href="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2015/10/GarbageCan_3D_AI_open1.png"><img class="alignnone size-medium wp-image-129" src="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2015/10/GarbageCan_3D_AI_open1-300x256.png" alt="GarbageCan_3D_AI_open" width="300" height="256"></a></p>
+                        <p>Deze tekeningen zijn meer high-fidelity. Dit is ook de prullenbak die wij lieten zien tijdens de presentatie. Dit is ons voorlopig ontwerp, hiermee zijn wij van plan om verder te gaan.</p>
+                </section>
+            </div>
+        </div>
+        <div aria-live="assertive" aria-atomic="true" aria-relevant="text" class="mdl-js-snackbar"></div>
+    </main>
+</div>
+<script src="js/lib/jquery.min.js"></script>
+<script src="js/lib/jgestures.min.js"></script>
+<script src="js/lib/material.min.js"></script>
+<script src="js/lib/material.add.min.js"></script>
+<script src="js/lib/APIFunctions.js"></script>
+<script src="js/script.js"></script>
+<script>
+
+</script>
+</body>
+</html>

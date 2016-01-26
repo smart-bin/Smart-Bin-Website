@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+    <title>Concept - Project Smart Bin</title>
+    <meta name="description" content="">
+
+    <!-- Mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+    <!-- Chrome / Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="black">
+    <link rel="icon" href="icon.png">
+
+    <link rel="stylesheet" href="css/lib/material.color.min.css">
+    <link rel="stylesheet" href="css/lib/material.min.css">
+    <link rel="stylesheet" href="css/lib/material-icons.css">
+    <link rel="stylesheet" href="css/lib/roboto.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="cards">
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <div id="loader" class="spinner hidden hide">
+        <div class="mdl-shadow--4dp">
+            <div class="mdl-spinner mdl-spinner--single-color mdl-js-spinner is-active"></div>
+        </div>
+    </div>
+    <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+            <span class="mdl-layout-title">Blog - API</span>
+            <div class="mdl-layout-spacer"></div>
+            <nav class="mdl-navigation">
+                <a class="mdl-navigation__link" href="index.html"><span>Home</span></a>
+                <div class="submenu-container mdl-color--primary">
+                    <a for="categories-submenu" class="mdl-navigation__link has-submenu" href="#"><span>Categorieën</span></a>
+                    <ul id="categories-submenu" class="submenu mdl-color--primary mdl-shadow--2dp">
+                        <li><a href="category-app.html"><span>App</span></a></li>
+                        <li><a href="category-api.html"><span>API</span></a></li>
+                        <li><a href="category-bin.html"><span>Bin</span></a></li>
+                        <li><a href="category-team.html"><span>Team</span></a></li>
+                        <li><a href="category-misc.html"><span>Overig</span></a></li>
+                    </ul>
+                </div>
+                <a class="mdl-navigation__link" href="about.html"><span>Over ons</span></a>
+                <a class="mdl-navigation__link" href="app.html"><span>De app</span></a>
+            </nav>
+        </div>
+    </header>
+    <div class="mdl-layout__drawer dis-visible">
+        <nav class="mdl-navigation">
+            <a class="mdl-navigation__link" href="index.html"><i class="material-icons">home</i><span>Home</span></a>
+            <a class="mdl-navigation__link" href="#"><i class="material-icons">list</i><span>Categorieën</span></a>
+            <a class="mdl-navigation__link" href="about.html"><i class="material-icons">info</i><span>Over ons</span></a>
+            <a class="mdl-navigation__link" href="app.html"><i class="material-icons">apps</i><span>De app</span></a>
+        </nav>
+    </div>
+    <main class="mdl-layout__content">
+        <div class="page-content">
+            <div id="">
+                <section id="" class="mdl-card content-card text-card mdl-shadow--2dp">
+                    <h1>Nieuwe Mijlpaal API</h1>
+                        <p>We&nbsp;hebben we weer een nieuwe mijlpaal bereikt! Het is ons namelijk gelukt om data via de arduino door te sturen naar onze database via de API!<br>
+                            We hebben een Wifi-shield op de arduino aangesloten,&nbsp;een Wifi-shield maakt het mogelijk om de arduino draadloos te verbinden met het internet. Vervolgens hebben we data doorgestuurd naar onze zelfgemaakte API die het in onze database zet.<br>
+                            Hieronder de arduino code die we ervoor hebben gebruikt.<img class="alignnone size-medium wp-image-201" src="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2016/01/ArduinoCode1-300x234.png" alt="ArduinoCode1" width="300" height="234"></p>
+                        <p><a href="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2016/01/ArduinoCode2.png"><img class="alignnone size-medium wp-image-202" src="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2016/01/ArduinoCode2-300x264.png" alt="ArduinoCode2" width="300" height="264"></a></p>
+                        <p>De data die we nu hebben kunnen doorsturen hebben we van tevoren meegegeven. De volgende stap is om de data die we van de sensor krijgen door te sturen. We hebben er alle vertrouwen in dat dit gaat lukken!</p>
+                        <p>&nbsp;</p>
+                </section>
+
+                <section id="" class="mdl-card content-card text-card mdl-shadow--2dp">
+                    <h1></h1><br>
+                        <p>In de kern van het project ligt het systeem. Afval wordt gewogen en die data opgeslagen. Dit gebeurt deels via de hardware, en deels via een API.</p>
+                        <p>De hardware communiceert met het internet, en stuurt wanneer nodig gegevens door naar de server, en die verwerkt het en slaat het op in een database. Dit wordt dan ontvangen door een API, die te benaderen is door iedereen.</p>
+                        <p>De A<img class=" wp-image-232 alignright" src="http://project.cmi.hro.nl/2015_2016/mtnll_mt2b_t3/Website/img/uploads/2016/01/binapi-143x300.png" alt="binapi" width="182" height="366">PI kan aangeven hoeveel punten je hebt, wat de status van je bakken is, en de geschiedenis van de data van al je bakken. Deze word in een formaat genaamd JSON teruggegeven, die je via allerlei programmeertalen kan ontvangen. Een ontwikkelaar kan deze data gebruiken om een app te maken die inzicht geeft in wat je de afgelopen maand weggegooid hebt, en wanneer dit gerecycled is hoeveel er dan weer mee gemaakt zou kunnen worden. Je kunt zelfs jouw gegevens vergelijken met andere gebruikers, en zo gemiddelden opbouwen van het hele land en kijken waar jij je daarin bevind.</p>
+                        <p>Een gamedeveloper kan een spel maken die jou nieuwe levens, kogels, poppetjes of in-game geld geeft. Dit geeft een gebruiker dan de mogelijkheid om zijn verzamelde punten uit te geven om allerlei spelletjes te spelen op hun favoriete platform. Je kunt, door te recycelen, direct tegen of met je vrienden spelen, en kijken wie door te recycelen de hoogste score in het spel haalt.</p>
+                        <p>Alle data in de API is zo toegankelijk mogelijk gemaakt, zodat elke ontwikkelaar ermee aan de slag kan. Door onze smart-bin als platform te gebruiken voor andere ontwikkelaars zal zo een extra motief gegeven worden om afval te scheiden, en zal de populariteit hiervan omhoog gaan. Zo maken we onze wereld een stuk schoner, en is het nog leuk ook.</p>
+                </section>
+            </div>
+        </div>
+        <div aria-live="assertive" aria-atomic="true" aria-relevant="text" class="mdl-js-snackbar"></div>
+    </main>
+</div>
+<script src="js/lib/jquery.min.js"></script>
+<script src="js/lib/jgestures.min.js"></script>
+<script src="js/lib/material.min.js"></script>
+<script src="js/lib/material.add.min.js"></script>
+<script src="js/lib/APIFunctions.js"></script>
+<script src="js/script.js"></script>
+<script>
+
+</script>
+</body>
+</html>
